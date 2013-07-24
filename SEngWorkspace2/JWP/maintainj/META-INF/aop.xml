@@ -1,0 +1,13 @@
+<aspectj>
+	<aspects>
+		<concrete-aspect name="com.maintainj.inst.J2SEAspect" extends="com.maintainj.aspect.J2SEExecutionAspect">
+			<pointcut name="anyExecution" expression="execution(public  * *.*(..)) || execution(public  *.new(..))"/>
+			<pointcut name="beforeMain" expression="execution(public static void jmonkey.office.jwp.JWP.main(String[])) || execution(public static void jmonkey.office.jwp.JWP.main(String...))"/>
+		</concrete-aspect>
+	</aspects>
+	<weaver options="-proceedOnError -nowarn -XaddSerialVersionUID">
+		<include within="jmonkey..*"/>
+		<include within="jmonkey.office.jwp.JWP"/>
+		<exclude within="com.maintainj..*"/>
+	</weaver>
+</aspectj>

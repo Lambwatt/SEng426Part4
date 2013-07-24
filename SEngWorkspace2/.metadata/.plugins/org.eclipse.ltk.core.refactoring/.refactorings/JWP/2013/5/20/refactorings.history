@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;r_multipleDocs_AWT-EventQueue-0_1.ser&apos; to &apos;JWP_tests&apos;&#x0A;- Original project: &apos;JWP&apos;&#x0A;- Destination element: &apos;JWP_tests&apos;&#x0A;- Original element: &apos;r_multipleDocs_AWT-EventQueue-0_1.ser&apos;&#x0A;- Update references to refactored element" description="Move file" element1="TraceFiles/r_multipleDocs_AWT-EventQueue-0_1.ser" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1368743833023" target="/JWP_tests" units="0" version="1.0"/>
+</session>

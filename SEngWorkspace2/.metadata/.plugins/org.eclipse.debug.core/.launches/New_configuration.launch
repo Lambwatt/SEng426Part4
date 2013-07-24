@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.maintainj.launching.j2se">
+<booleanAttribute key="CAPTURE_SQL" value="false"/>
+<stringAttribute key="DB_DRIVER" value=""/>
+<booleanAttribute key="DONT_GENERATE_ASPECT" value="false"/>
+<booleanAttribute key="LOG_CALL_DATA" value="false"/>
+<booleanAttribute key="MULTI_NODES" value="false"/>
+<stringAttribute key="NODE_AGENT_PORT" value="33300"/>
+<booleanAttribute key="PRINT_DEBUG_MESSAGES" value="false"/>
+<booleanAttribute key="PUBLIC_ONLY" value="true"/>
+<listAttribute key="SELECTED_PACKAGES">
+<listEntry value="jmonkey"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/JWP/com/jmonkey/office/jwp/JWP.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="jmonkey.office.jwp.JWP"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="JWP"/>
+</launchConfiguration>
