@@ -1,0 +1,78 @@
+package jmonkey.office.jwp.support;
+
+import static org.junit.Assert.*;
+
+import java.awt.event.ItemListener;
+
+import javax.swing.Action;
+
+import org.junit.Test;
+
+public class ActionComboBoxTest {
+	
+	public boolean contains(ItemListener[] a, ItemListener x)
+	{
+		boolean result = false;
+		for(int i = 0; i<a.length; i++)
+		{
+			if(a[i].equals(x)){
+				result = true;
+				break;
+			}
+		}
+		return result;
+	}
+
+	@Test
+	public void testNoItems() {
+		ActionComboBox x = new ActionComboBox();
+		assertTrue("Failed void construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed void construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+		assertTrue("Failed void construction: incorrect length of getActions", x.getActions().size()==0);
+	}
+
+	@Test
+	public void testEmptyList() {
+		Action[] i = new Action[0];
+		ActionComboBox x = new ActionComboBox(i);
+		assertTrue("Failed emptyList construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed emptyList construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+		assertTrue("Failed emptyList construction: incorrect length of getActions", x.getActions().size()==0);
+	}
+	
+	@Test
+	public void testValidList() {
+		Action[] i = new Action[0];
+		ActionComboBox x = new ActionComboBox(i);
+		assertTrue("Failed emptyList construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed emptyList construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+		assertTrue("Failed emptyList construction: incorrect length of getActions", x.getActions().size()==0);
+	}
+	
+	@Test
+	public void testNull() {
+		Action[] i = new Action[0];
+		ActionComboBox x = new ActionComboBox(i);
+		assertTrue("Failed emptyList construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed emptyList construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+		assertTrue("Failed emptyList construction: incorrect length of getActions", x.getActions().size()==0);
+	}
+	
+	@Test
+	public void testListWithOneInvalid() {
+		Action[] i = new Action[0];
+		ActionComboBox x = new ActionComboBox(i);
+		assertTrue("Failed emptyList construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed emptyList construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+		assertTrue("Failed emptyList construction: incorrect length of getActions", x.getActions().size()==0);
+	}
+	
+	@Test
+	public void testListOfOneInvalid() {
+		Action[] i = new Action[0];
+		ActionComboBox x = new ActionComboBox(i);
+		assertTrue("Failed emptyList construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed emptyList construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+		assertTrue("Failed emptyList construction: incorrect length of getActions", x.getActions().size()==0);
+	}
+}

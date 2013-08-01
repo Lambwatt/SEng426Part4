@@ -1,0 +1,37 @@
+package jmonkey.office.jwp.support;
+
+import static org.junit.Assert.*;
+
+import java.awt.event.ItemListener;
+
+import org.junit.Test;
+
+public class ActionComboBoxTest {
+	
+	public boolean contains(ItemListener[] a, ItemListener x)
+	{
+		boolean result = false;
+		for(int i = 0; i<a.length; i++)
+		{
+			if(a[i].equals(x)){
+				result = true;
+				break;
+			}
+		}
+		return result;
+	}
+
+	@Test
+	public void testNoItems() {
+		ActionComboBox x = new ActionComboBox();
+		assertTrue("Failed void construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed void construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+	}
+
+	@Test
+	public void testEmptyList() {
+		ActionComboBox x = new ActionComboBox();
+		assertTrue("Failed void construction: did not contain void", x.getActions().isEmpty());
+		assertTrue("Failed void construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
+	}
+}
