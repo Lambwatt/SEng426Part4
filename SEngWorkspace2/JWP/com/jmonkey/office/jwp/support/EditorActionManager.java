@@ -253,6 +253,7 @@ public class EditorActionManager extends ActionManager {
         if (size != 0) {
           MutableAttributeSet attr = editor.getSimpleAttributeSet();
           StyleConstants.setFontSize(attr, size);
+          setCharacterAttributes(editor.getTextComponent(), attr, false); //fixed bug here
         }
         else {
           Toolkit.getDefaultToolkit().beep();
@@ -476,6 +477,7 @@ public class EditorActionManager extends ActionManager {
       Editor target = EditorActionManager.getActiveEditor();
       if (target != null) {
         target.getTextComponent().copy();
+        
       }
     }
   }
@@ -1134,10 +1136,12 @@ public class EditorActionManager extends ActionManager {
   protected final void setParagraphAttributes(JEditorPane editor,
       AttributeSet attr, boolean replace) {
       int p = editor.getSelectionStart();
+      int q = editor.getSelectionEnd(); //fixed
+      
     Editor active = EditorActionManager.getActiveEditor();
     Document doc = active.getTextComponent().getDocument();
     if (doc instanceof StyledDocument) {
-      ((StyledDocument) doc).setParagraphAttributes(p, p, attr, replace);
+      ((StyledDocument) doc).setParagraphAttributes(p, q-p, attr, replace); //2nd arg p -> q-p
     }
     editor.requestFocus();
   }

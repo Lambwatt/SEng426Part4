@@ -4,6 +4,7 @@ package jmonkey.office.jwp;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
+import java.beans.PropertyVetoException;
 import java.io.File;
 import java.io.IOException;
 import java.util.Vector;
@@ -484,7 +485,9 @@ public final class DocumentManager extends DefaultDesktopManager implements
     int nextY = 0;
     for (int i = 0; i < comps.length; i++) {
       if (comps[i] instanceof JInternalFrame & comps[i].isVisible()
-          & !((JInternalFrame) comps[i]).isIcon()) {        
+          & !((comps[i] instanceof JInternalFrame.JDesktopIcon))) { //fixed if it is an icon, comps[i] cant be case to JInternalFrame
+    	  											 //As it is a JInternalFrame.JDesktopIcon
+    	  											 //JInternalFrame) comps[i]).isIcon()->comps[i] instanceof JInternalFrame.JDesktopIcon
         if ((nextX + targetWidth > dsize.width)
             || (nextY + targetHeight > dsize.height)) {
           nextX = 0;
@@ -506,7 +509,14 @@ public final class DocumentManager extends DefaultDesktopManager implements
     }
 
     public void actionPerformed(ActionEvent e) {
-      closeActiveDocument();
+      if(closeActiveDocument()){//fixed
+    	  
+          DocumentFrame actOnDoc= active();
+
+          actOnDoc.dispose();
+    	  
+      }
+      
     }
   }
 
@@ -537,7 +547,7 @@ public final class DocumentManager extends DefaultDesktopManager implements
       }
     }
     else {
-      System.exit(0);
+      //System.exit(0);
       return true;
     }
   }
@@ -689,3 +699,4 @@ public final class DocumentManager extends DefaultDesktopManager implements
     return p;
   }
 }
+
