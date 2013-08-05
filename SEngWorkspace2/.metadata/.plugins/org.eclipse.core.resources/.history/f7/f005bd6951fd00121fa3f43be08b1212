@@ -1,0 +1,6 @@
+package jmonkey.office.jwp;
+
+public class MiniJWP extends JWP {
+
+		MiniJWP()
+}

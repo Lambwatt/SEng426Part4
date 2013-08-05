@@ -1,11 +1,11 @@
-2013-07-24 13:10:35.813 [Worker-10] INFO    com.objectaid.uml.license.LicenseManager initialize: found license Diagram Add-On 1.1.x - EVAL until 2013-06-14
-2013-07-24 13:10:35.827 [Worker-10] INFO    com.objectaid.uml.license.LicenseManager initialize: found license Sequence Diagram 1.1.x - EVAL until 2013-06-14
-2013-07-24 13:10:36.932 [Worker-0] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[ucls]: com.objectaid.uml.cls.model.ClassDiagramFactory@4800ef96
-2013-07-24 13:10:36.944 [Worker-0] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[useq]: com.objectaid.uml.seq.model.SequenceDiagramFactory@13f28b6d
-2013-07-24 13:10:37.050 [Worker-0] INFO    com.objectaid.uml.license.LicenseManager checkLicense: invalid license Diagram Add-On 1.1.x - EVAL until 2013-06-14 because License is expired
-2013-07-24 13:10:37.053 [Worker-0] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.TextLink in [], no license for [com.objectaid.uml.addon]
-2013-07-24 13:10:37.054 [Worker-0] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.TextLinkEditPart in [], no license for [com.objectaid.uml.addon]
-2013-07-24 13:10:37.054 [Worker-0] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.PTextLink in [], no license for [com.objectaid.uml.addon]
-2013-07-24 13:10:37.055 [Worker-0] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.model.diagram.ConnectionEnd in [], no license for [com.objectaid.uml.addon]
-2013-07-24 13:10:37.056 [Worker-0] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.model.persistence.PersistedConnectionEnd in [], no license for [com.objectaid.uml.addon]
-2013-07-24 13:10:37.056 [Worker-0] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.TextNodeDefinition in [com.objectaid.uml.cls], no license for [com.objectaid.uml.addon]
+2013-07-31 17:34:07.271 [Worker-0] INFO    com.objectaid.uml.license.LicenseManager initialize: found license Diagram Add-On 1.1.x - EVAL until 2013-06-14
+2013-07-31 17:34:07.305 [Worker-0] INFO    com.objectaid.uml.license.LicenseManager initialize: found license Sequence Diagram 1.1.x - EVAL until 2013-06-14
+2013-07-31 17:34:08.396 [Worker-4] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[ucls]: com.objectaid.uml.cls.model.ClassDiagramFactory@69f31d
+2013-07-31 17:34:08.416 [Worker-4] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[useq]: com.objectaid.uml.seq.model.SequenceDiagramFactory@6808b943
+2013-07-31 17:34:08.594 [Worker-4] INFO    com.objectaid.uml.license.LicenseManager checkLicense: invalid license Diagram Add-On 1.1.x - EVAL until 2013-06-14 because License is expired
+2013-07-31 17:34:08.606 [Worker-4] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.TextLink in [], no license for [com.objectaid.uml.addon]
+2013-07-31 17:34:08.607 [Worker-4] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.TextLinkEditPart in [], no license for [com.objectaid.uml.addon]
+2013-07-31 17:34:08.608 [Worker-4] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.PTextLink in [], no license for [com.objectaid.uml.addon]
+2013-07-31 17:34:08.610 [Worker-4] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.model.diagram.ConnectionEnd in [], no license for [com.objectaid.uml.addon]
+2013-07-31 17:34:08.610 [Worker-4] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.model.persistence.PersistedConnectionEnd in [], no license for [com.objectaid.uml.addon]
+2013-07-31 17:34:08.611 [Worker-4] WARNING com.objectaid.uml.util.EclipseHelper loadClass: cannot find com.objectaid.uml.addon.doc.TextNodeDefinition in [com.objectaid.uml.cls], no license for [com.objectaid.uml.addon]

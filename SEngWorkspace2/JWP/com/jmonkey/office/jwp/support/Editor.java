@@ -204,8 +204,8 @@ public abstract class Editor extends JPanel {
               {"Paste", "true", "boolean"}, 
               {"Undo", "true", "boolean"},
               {"Redo", "true", "boolean"},
-              {"SelectAll", "true", "boolean"},
-              {"SelectNone", "true", "boolean"}
+              {"Select All", "true", "boolean"},
+              {"Select None", "true", "boolean"}
           });
         }
       }

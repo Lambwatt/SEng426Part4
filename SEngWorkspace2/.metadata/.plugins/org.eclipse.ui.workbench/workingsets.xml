@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1371512122155_1" label="inspection_group" name="inspection_group">
-<item elementID="=JWP/com&lt;jmonkey.office.jwp.support{Editor.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp.support.editors{StyledEditor.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp.support.editors{TEXTEditor.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=JWP" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JWP_tests" type="4"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp.support{EditorActionManager.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp{DocumentFrame.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp.support{ActionComboBox.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp{JWP.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.help{OfficeHelp.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.office.jwp.support{PropertySheetDialog.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=JlinkedList" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.export{RegistryPropertyException.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=JWP/com&lt;jmonkey.export{RegistryImpl.java" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1368661481586_0" label="Window Working Set" name="Aggregate for window 1368661481584"/>
 </workingSetManager>

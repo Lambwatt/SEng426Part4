@@ -1057,6 +1057,7 @@ public class JWP extends JFrame implements ActionListener {
 			System.exit(1);
 		}
 	}
+	
 
 	void updateOpenWindowsMenu() {
 		String[] openDocs = getDesktopManager().openDocumentList();
@@ -1068,5 +1069,15 @@ public class JWP extends JFrame implements ActionListener {
 			item.addActionListener(m_openWindowAction);
 			m_openWindows.insert(item, 0);
 		}
+	}
+	
+	public JWP(){
+		super();
+		
+		dt = new MainDesktop();
+		DocumentManager dm = new DocumentManager(this);
+		dt.setDesktopManager(dm);
+		//Testing constructor. Does nothing.
+		eam = new EditorActionManager(this, dm);
 	}
 }

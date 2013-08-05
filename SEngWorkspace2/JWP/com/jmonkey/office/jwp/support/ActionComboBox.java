@@ -19,10 +19,18 @@ public final class ActionComboBox extends JComboBox implements ItemListener {
     this.addItemListener(this);
   }
   
+  //for testing only
+  public Hashtable getActions(){
+	  return m_actions;
+  }
+  
   public ActionComboBox(Action[] items) {
     super();
-    for (int i = 0; i < items.length; i++) {
-      this.addItem(items[i]);
+    if (items!=null)
+    {
+	    for (int i = 0; i < items.length; i++) {
+	      this.addItem(items[i]);
+	    }
     }
     this.addItemListener(this);
   }

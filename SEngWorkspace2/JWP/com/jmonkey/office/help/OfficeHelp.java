@@ -35,6 +35,15 @@ public class OfficeHelp extends JFrame {
     try {
       iceClass = Class.forName("ice.iblite.Browser");
       iceBrowser = (JComponent) iceClass.newInstance();
+      
+      //moved ice dependent statements into try catch
+      this.getContentPane().add("Center", iceBrowser);
+
+      Object[] args = { start_loc };
+      iceMethodCall("gotoLocation", args);
+
+      // iceBrowser.gotoLocation(start_loc);
+      
     }
     catch (Exception e) {
       JOptionPane.showMessageDialog(null,
@@ -42,14 +51,8 @@ public class OfficeHelp extends JFrame {
               + " put icebrowserlist.jar in your CLASSPATH",
           "Can't find class ice.iblite.Browser", JOptionPane.WARNING_MESSAGE);
     }
-
-    this.getContentPane().add("Center", iceBrowser);
-
-    Object[] args = { start_loc };
-    iceMethodCall("gotoLocation", args);
-
-    // iceBrowser.gotoLocation(start_loc);
-
+    //took ice dependent statements from here
+    
   }
 
   /**
