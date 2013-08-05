@@ -1073,11 +1073,6 @@ public class JWP extends JFrame implements ActionListener {
 	
 	public JWP(){
 		super();
-		
-		dt = new MainDesktop();
-		DocumentManager dm = new DocumentManager(this);
-		dt.setDesktopManager(dm);
 		//Testing constructor. Does nothing.
-		eam = new EditorActionManager(this, dm);
 	}
 }

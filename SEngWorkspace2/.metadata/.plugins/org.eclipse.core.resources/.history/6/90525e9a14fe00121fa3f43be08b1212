@@ -735,7 +735,7 @@ public class EditorActionManager extends ActionManager {
    * Create the default actions of the type: FONT_COLOUR_ACTION
    */
   public final Action[] createDefaultColourActions() {
-    Action[] a = new Action[13];//changed 14 to 13 so that a null element is no longer created.
+    Action[] a = new Action[14];
     a[0] = this.getColourAction("White", Color.white);
     a[1] = this.getColourAction("Black", Color.black);
     a[2] = this.getColourAction("Red", Color.red);
