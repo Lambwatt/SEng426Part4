@@ -1,4 +1,4 @@
-#Wed Jul 24 13:29:33 PDT 2013
+#Sun Aug 04 17:45:35 PDT 2013
 sp_cleanup.remove_unnecessary_casts=true
 sp_cleanup.remove_trailing_whitespaces_ignore_empty=false
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
@@ -34,6 +34,7 @@ tabWidthPropagated=true
 sp_cleanup.use_parentheses_in_expressions=false
 content_assist_proposals_foreground=0,0,0
 sp_cleanup.use_blocks_only_for_return_and_throw=false
+hoverModifiers=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;\!0;org.eclipse.jdt.ui.ProblemHover;\!0;org.eclipse.jdt.ui.NLSStringHover;Command+Alt;org.eclipse.jdt.ui.JavadocHover;\!0;org.eclipse.jdt.ui.JavaSourceHover;Shift;org.eclipse.jdt.ui.AnnotationHover;\!0;
 sp_cleanup.add_missing_override_annotations=true
 sp_cleanup.make_type_abstract_if_missing_method=false
 sp_cleanup.add_missing_annotations=true
@@ -51,6 +52,7 @@ sp_cleanup.remove_unused_private_members=false
 sp_cleanup.format_source_code_changes_only=false
 sp_cleanup.add_missing_deprecated_annotations=true
 sp_cleanup.add_generated_serial_version_id=false
+hoverModifierMasks=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;0;org.eclipse.jdt.ui.ProblemHover;0;org.eclipse.jdt.ui.NLSStringHover;4259840;org.eclipse.jdt.ui.JavadocHover;0;org.eclipse.jdt.ui.JavaSourceHover;131072;org.eclipse.jdt.ui.AnnotationHover;0;
 sp_cleanup.qualify_static_member_accesses_through_subtypes_with_declaring_class=true
 content_assist_proposals_background=255,255,255
 sp_cleanup.add_missing_nls_tags=false
