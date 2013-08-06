@@ -17,7 +17,10 @@ import jmonkey.export.Registry;
 import jmonkey.office.jwp.support.ActionComboBox;
 
 import org.junit.Test;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 6427fa28579d20a7083de33dcaca1c228f259268
 import jmonkey.export.RegistryFormatException;
 import jmonkey.office.jwp.JWP;
 

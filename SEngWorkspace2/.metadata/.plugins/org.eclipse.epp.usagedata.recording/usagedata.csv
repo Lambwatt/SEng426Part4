@@ -149,3 +149,53 @@ activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",13758287415
 deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375828748789
 activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375828764681
 deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375828769608
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375828775193
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829038653
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829335288
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829348663
+activated,view,org.eclipse.jdt.junit,3.7.0.v20110505-0800,"org.eclipse.jdt.junit.ResultView",1375829423420
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829423486
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829437744
+error,log,,,"Error while analyzing package fragment root com at F/JWP/build/classes (code 5007).",1375829438727
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829438770
+error,log,,,"Unhandled event loop exception",1375829438880
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829439082
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829443832
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1375829449692
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1375829449762
+activated,view,org.eclipse.jdt.junit,3.7.0.v20110505-0800,"org.eclipse.jdt.junit.ResultView",1375829454789
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1375829484113
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.refresh",1375829488135
+error,log,,,"JavaBuilder handling CoreException",1375829488551
+error,log,,,"JavaBuilder handling CoreException",1375829488617
+error,log,,,"JavaBuilder handling CoreException",1375829488741
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829492593
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829496432
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1375829501469
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.file.save",1375829525641
+started,bundle,org.eclipse.mylyn.java.tasks,3.6.0.v20110608-1400,"org.eclipse.mylyn.java.tasks",1375829526192
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829532688
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829538298
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1375829539137
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829539522
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829541341
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1375829543574
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1375829554022
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1375829554199
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1375829554284
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829554310
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829555769
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1375829557553
+opened,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1375829557697
+activated,editor,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.ClassFileEditor",1375829557775
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829557798
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829559098
+activated,view,org.eclipse.ui.console,3.5.100.v20110511,"org.eclipse.ui.console.ConsoleView",1375829559954
+activated,view,org.eclipse.jdt.ui,3.7.1.r371_v20110824-0800,"org.eclipse.jdt.ui.PackageExplorer",1375829568058
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829572481
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829955688
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829960592
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829963873
+deactivated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829965267
+activated,workbench,org.eclipse.ui.workbench,3.7.0.I20110519-0100,"",1375829983960
+executed,command,org.eclipse.ui,3.7.0.I20110602-0100,"org.eclipse.ui.edit.copy",1375829997287
