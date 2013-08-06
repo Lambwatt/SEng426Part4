@@ -353,13 +353,6 @@ public final class DocumentManager extends DefaultDesktopManager implements
        ry.getString("MAIN", "default.content.type"));
   }
 
-
-  protected final DocumentFrame createDocumentFrame(String contentType) {
-    return createDocumentFrame(null,
-        ndt + p.getDocumentNumber(), contentType);
-  }
-
-
   protected final DocumentFrame createDocumentFrame() {
     return createDocumentFrame(
         null,
@@ -416,9 +409,6 @@ public final class DocumentManager extends DefaultDesktopManager implements
   }
 
 
-  protected final JWP getApp() {//remove this
-    return p;
-  }
 
   private void init() {
   }
