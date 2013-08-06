@@ -120,14 +120,12 @@ public final class DocumentFrame extends JInternalFrame implements
     moveToFront();
     try {
       setSelected(true);
+      m_editor.activate(); 
+      if (m_app.getDesktopManager().active() != this) {
+      	m_app.getDesktopManager().activateFrame(this);
+      }
     }
     catch (java.beans.PropertyVetoException pve0) {
-    }
-
-    m_editor.activate(); 
-
-    if (m_app.getDesktopManager().active() != this) {
-      m_app.getDesktopManager().activateFrame(this);
     }
   }
 }
