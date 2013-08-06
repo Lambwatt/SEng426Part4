@@ -36,6 +36,7 @@ public final class ActionComboBox extends JComboBox implements ItemListener {
   }
   
   public void addItem(Action a) {
+	  if(a==null) return;//added
       String name = (String) a.getValue(Action.NAME);
       if (!m_actions.containsKey(name)) {
         m_actions.put(name, a);
@@ -44,21 +45,28 @@ public final class ActionComboBox extends JComboBox implements ItemListener {
   }
   
   public Object getItemAt(int index) {
-    String name = (String) super.getItemAt(index);
-    if (m_actions.containsKey(name)) {
-      return ((Action) m_actions.get(name));
-    } 
-    else {
-      return null;
-    }
+	  	//added
+	  	if(index<0 || index>m_actions.size())
+		  return null;
+	    String name = (String) super.getItemAt(index);
+	    if (m_actions.containsKey(name)) {
+	      return ((Action) m_actions.get(name));
+	    } 
+	    else {
+	      return null;//Consider removing for 100% coverage. Only occurs if an index exits for a non present item
+	    }
   }
   
   public void insertItemAt(Action a, int index) {
-      String name = (String) a.getValue(Action.NAME);
-      if (!m_actions.containsKey(name)) {
-        m_actions.put(name, a);
-        super.insertItemAt(name, index);
-      }
+	  //Added detection of null arguments
+	  if(a != null && index<=m_actions.size() && index>=0)
+	  {
+	      String name = (String) a.getValue(Action.NAME);
+	      if (!m_actions.containsKey(name)) {
+	        m_actions.put(name, a);
+	        super.insertItemAt(name, index);
+	      }
+	  }
   }
   
   public void itemStateChanged(ItemEvent e) {
@@ -77,10 +85,12 @@ public final class ActionComboBox extends JComboBox implements ItemListener {
   }
   
   public void removeItem(Object anObject) {
+	if(anObject==null)return;//added
     throw new UnsupportedOperationException("removeItem(Object)"); 
   }
 
   public void removeItemAt(int anIndex) {
+	  if(anIndex<0 || anIndex>=m_actions.size())return;//added
     throw new UnsupportedOperationException("removeItemAt(int)");
   }
 }

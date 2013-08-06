@@ -26,26 +26,29 @@ public final class DocumentFrame extends JInternalFrame implements
   private Editor m_editor;
 
   public DocumentFrame(JWP app, String contentType) {
-    super();
-    m_app = app;
-
-    setFrameIcon(new ImageIcon(Loader.load("text_window16.gif")));
-
-    setIconifiable(true);
-    setMaximizable(true);
-    setResizable(true);
-    setClosable(true);
-
-    addInternalFrameListener( this);
-    addFocusListener(this);
-    addVetoableChangeListener(this);
-
-    m_editor = Editor.createEditorForContentType(contentType, app);
-
-    m_editor.addFocusListener(this);
-    setContentPane(m_editor);
-
-    m_editor.activate(); 
+	super();
+	if(app!=null && contentType!=null){
+   
+	    m_app = app;
+	
+	    setFrameIcon(new ImageIcon(Loader.load("text_window16.gif")));
+	
+	    setIconifiable(true);
+	    setMaximizable(true);
+	    setResizable(true);
+	    setClosable(true);
+	
+	    addInternalFrameListener( this);
+	    addFocusListener(this);
+	    addVetoableChangeListener(this);
+	
+	    m_editor = Editor.createEditorForContentType(contentType, app);
+	
+	    m_editor.addFocusListener(this);
+	    setContentPane(m_editor);
+	
+	    m_editor.activate();
+	}
   }
 
   public String getName() {
