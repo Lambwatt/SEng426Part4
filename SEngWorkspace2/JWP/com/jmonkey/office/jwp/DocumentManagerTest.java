@@ -2,6 +2,8 @@ package jmonkey.office.jwp;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
+
 import org.junit.Test;
 
 public class DocumentManagerTest {
@@ -23,19 +25,6 @@ public class DocumentManagerTest {
 			return;
 		}
 		fail("Expected illegal argumenttest_DocumentManager_invalid");
-
-	}
-	
-	@Test
-	public void test_EditorOpen_valid() {
-		JWP jwp = new JWP();
-		DocumentManager dm= new DocumentManager(null);
-		try{
-			dm.editorOpen();
-		}catch(Exception e){
-			fail("unexpected exception " + e.getCause() + ", in test_activate");
-		}
-		
 
 	}
 

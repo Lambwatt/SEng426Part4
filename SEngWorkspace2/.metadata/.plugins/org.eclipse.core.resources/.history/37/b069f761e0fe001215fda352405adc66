@@ -14,11 +14,10 @@ import javax.swing.text.DefaultEditorKit;
 import javax.swing.text.StyledEditorKit;
 
 import jmonkey.export.Registry;
-import jmonkey.office.jwp.support.ActionComboBox;
 
 import org.junit.Test;
 
-import jmonkey.export.RegistryFormatException;
+import com.jmonkey.export.RegistryFormatException;
 import jmonkey.office.jwp.JWP;
 
 public class ActionComboBoxTest {
