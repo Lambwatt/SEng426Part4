@@ -40,20 +40,32 @@ public class EditorActionManagerTest {
 	@Test
 	public void test_EditorActionManager_invalid1() {
 		JWP jwp = new JWP();
-		EditorActionManager eam = new EditorActionManager(null, new DocumentManager(jwp));
-		assertNull(eam);
+		try{
+			EditorActionManager eam = new EditorActionManager(null, new DocumentManager(jwp));
+		}catch(IllegalArgumentException e){
+			return;
+		}
+		fail("Expected IllegalArgumentException in test_EditorActionManager_invalid1");
 	}
 
 	@Test
 	public void test_EditorActionManager_invalid2() {
-		EditorActionManager eam = new EditorActionManager(new JFrame(), null);
-		assertNull(eam);
+		try{
+			EditorActionManager eam = new EditorActionManager(new JFrame(), null);
+		}catch(IllegalArgumentException e){
+			return;
+		}
+		fail("Expected IllegalArgumentException in test_EditorActionManager_invalid2");
 	}
 
 	@Test
 	public void test_EditorActionManager_invalid3() {
-		EditorActionManager eam = new EditorActionManager(null, null);
-		assertNull(eam);
+		try{
+			EditorActionManager eam = new EditorActionManager(null, null);
+		}catch(IllegalArgumentException e){
+			return;
+		}
+		fail("Expected IllegalArgumentException in test_EditorActionManager_invalid3");
 	}
 	
 	@Test
@@ -62,9 +74,10 @@ public class EditorActionManagerTest {
 		EditorActionManager eam = new EditorActionManager(new JFrame(),new DocumentManager(jwp));
 		try{
 			eam.createInputAttributes(null, null);
-		}catch(NullPointerException e){
-			fail("Unexpected NullPointerException in test_createInputAttributes_invalid");
+		}catch(IllegalArgumentException e){
+			return;
 		}
+		fail("Expected IllegalArgumentException in test_createInputAttributes_invalid");
 	}
 
 	@Test
@@ -84,9 +97,10 @@ public class EditorActionManagerTest {
 		EditorActionManager eam = new EditorActionManager(new JFrame(),new DocumentManager(jwp));
 		try{
 			eam.activate(null);
-		}catch(Exception e){
-			fail("unexpected exception " + e.getCause() + ", in test_activate");
+		}catch(IllegalArgumentException e){
+			return;
 		}
+		fail("Expected IllegalArgumentException in test_activate");
 	}
 
 	@Test
@@ -190,9 +204,10 @@ public class EditorActionManagerTest {
 		EditorActionManager eam = new EditorActionManager(new JFrame(),new DocumentManager(jwp));
 		try{
 			eam.setCharacterAttributes(null, null, false);
-		}catch(Exception e){
-			fail("Unexpected exception " + e.getCause() + ", in test_setCharacterAttributes_invalid");
+		}catch(IllegalArgumentException e){
+			return;
 		}
+		fail("Expected IllegalArgumentException in test_setCharacterAttributes_invalid");
 	}
 		
 	@Test
@@ -216,9 +231,10 @@ public class EditorActionManagerTest {
 		EditorActionManager eam = new EditorActionManager(new JFrame(),new DocumentManager(jwp));
 		try{
 			eam.getCharacterAttributes(null);
-		}catch(Exception e){
-			fail("Unexpected exception " + e.getCause() + ", in test_getCharacterAttributes_invalid");
+		}catch(IllegalArgumentException e){
+			return;
 		}
+		fail("Expected IllegalArgumentException in test_getCharacterAttributes_invalid");
 	}
 		
 	@Test
@@ -227,8 +243,9 @@ public class EditorActionManagerTest {
 		EditorActionManager eam = new EditorActionManager(new JFrame(),new DocumentManager(jwp));
 		try{
 			eam.setParagraphAttributes(null, null, false);
-		}catch(Exception e){
-			fail("Unexpected exception " + e.getCause() + ", in test_setParagraphAttributes_invalid");
+		}catch(IllegalArgumentException e){
+			return;
 		}
+		fail("Expected IllegalArgumentException in test_setParagraphAttributes_invalid");
 	}
 }

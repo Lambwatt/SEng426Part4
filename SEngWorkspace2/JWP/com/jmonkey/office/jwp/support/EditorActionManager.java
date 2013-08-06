@@ -87,6 +87,13 @@ public class EditorActionManager extends ActionManager {
   
   public EditorActionManager(JFrame app, FileActionListener agent) {
 
+	if(app == null){
+		throw new IllegalArgumentException("JFrame app paramater must not be null");
+	}
+	if(agent == null){
+		throw new IllegalArgumentException("FileActionListener agent paramater must not be null");
+	}
+	  
     m_actions.put(A_C_A_P, 
         new AlignmentAction(A_C_A_P, 
             StyleConstants.ALIGN_CENTER));
@@ -706,6 +713,9 @@ public class EditorActionManager extends ActionManager {
    * Add an editor to the action manager.
    */
   public void activate(Editor editor) {
+	if(editor == null){
+		throw new IllegalArgumentException("Editor editor parameter must not be null in activate()");
+	}
     // First deactivate the current editor if there is one.
     if (EditorActionManager.s_editor != null) {
       deactivate(EditorActionManager.s_editor);
@@ -789,6 +799,12 @@ public class EditorActionManager extends ActionManager {
    * 
    */
   protected void createInputAttributes(Element element, MutableAttributeSet set) {
+	if(element == null){
+		throw new IllegalArgumentException("Element element paramater must not be null");
+	}
+	if(set == null){
+		throw new IllegalArgumentException("MutableAttributeSet set paramater must not be null");
+	}
     set.removeAttributes(set);
     set.addAttributes(element.getAttributes());
     set.removeAttribute(StyleConstants.ComponentAttribute);
@@ -945,6 +961,9 @@ public class EditorActionManager extends ActionManager {
   }
 
   public final Action getColourAction(String name, Color colour) {
+	if(name == null || name == "" || colour == null){
+		return null;
+	}
     if (!m_actions.containsKey(name)) {
       m_actions.put(name, new ForegroundAction(name, colour));
     }
@@ -980,6 +999,7 @@ public class EditorActionManager extends ActionManager {
   }
 
   public final Action getFontFaceAction(Font font) {
+	if(font == null) return null;
     return this.getFontFaceAction(font.getFontName());
   }
 
@@ -991,6 +1011,7 @@ public class EditorActionManager extends ActionManager {
   }
 
   public final Action getFontSizeAction(int size) {
+	if(size < 0) return null;
     String key = Integer.toString(size);
     if (!m_actions.containsKey(key)) {
       m_actions.put(key, new FontSizeAction(key, size));
@@ -1092,6 +1113,12 @@ public class EditorActionManager extends ActionManager {
    */
   protected final void setCharacterAttributes(JEditorPane editor,
       AttributeSet attr, boolean replace) {
+	if(editor == null){
+		throw new IllegalArgumentException("JEditorPane editor is null in setCharacterAttributes()");
+	}
+	if(attr == null){
+		throw new IllegalArgumentException("AttributeSet attr is null in setCharacterAttributes()");
+	}
     int p0 = editor.getSelectionStart();
     int p1 = editor.getSelectionEnd();
     Editor active = EditorActionManager.getActiveEditor();
@@ -1113,6 +1140,9 @@ public class EditorActionManager extends ActionManager {
   }
   
   protected final AttributeSet getCharacterAttributes(JEditorPane editor) {
+	if(editor == null){
+		throw new IllegalArgumentException("JEditorPane editor is null in getCharacterAttributes()");
+	}
     int p0 = editor.getSelectionStart();
     int p1 = editor.getSelectionEnd();
     if (p0 != p1) {
@@ -1133,6 +1163,12 @@ public class EditorActionManager extends ActionManager {
    */
   protected final void setParagraphAttributes(JEditorPane editor,
       AttributeSet attr, boolean replace) {
+	if(editor == null){
+		throw new IllegalArgumentException("JEditorPane editor is null in setParagraphAttributes()");
+	}
+	if(attr == null){
+		throw new IllegalArgumentException("AttributeSet attr is null in setParagraphAttributes()");
+	}
       int p = editor.getSelectionStart();
     Editor active = EditorActionManager.getActiveEditor();
     Document doc = active.getTextComponent().getDocument();

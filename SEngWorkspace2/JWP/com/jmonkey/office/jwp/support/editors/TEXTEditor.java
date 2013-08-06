@@ -157,7 +157,7 @@ public final class TEXTEditor extends Editor implements MouseListener,
     });
   }
 
-  public void documentSetSelection(int start, int length, boolean wordsOnly) {
+  public void documentSetSelection(int start, int length, boolean wordsOnly){
     try {
       m_editor.getCaret().setDot(
           (wordsOnly ? Utilities.getWordStart(m_editor, start) : start));
