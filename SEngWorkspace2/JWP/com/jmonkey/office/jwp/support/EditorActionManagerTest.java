@@ -4,27 +4,15 @@ import static org.junit.Assert.*;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Frame;
-import java.awt.event.ActionEvent;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Map;
-import java.util.Properties;
 
 import javax.swing.Action;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
-import javax.swing.event.CaretEvent;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.Element;
-import javax.swing.text.JTextComponent;
-import javax.swing.text.MutableAttributeSet;
-import javax.swing.text.StyledDocument;
 
 import jmonkey.office.jwp.DocumentManager;
 import jmonkey.office.jwp.JWP;
 import jmonkey.office.jwp.support.editors.RTFEditor;
+import jmonkey.office.jwp.support.editors.TEXTEditor;
 
 import org.junit.Test;
 
@@ -218,7 +206,7 @@ public class EditorActionManagerTest {
 		editor.setSelectionEnd(0);
 		EditorActionManager eam = new EditorActionManager(new JFrame(),new DocumentManager(jwp));
 		try{
-			eam.activate(null);
+			eam.activate(new TEXTEditor(eam));
 			eam.getCharacterAttributes(editor);
 		}catch(Exception e){
 			fail("Unexpected exception " + e.getCause() + ", in test_getCharacterAttributes_valid");
