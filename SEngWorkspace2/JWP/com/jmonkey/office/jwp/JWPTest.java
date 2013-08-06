@@ -23,6 +23,7 @@ public class JWPTest {
 	 * Create New Document
 	 * Click On Original Document
 	 * Ensure Original Document is at the front
+	 * Write some Text
 	 * Click on text Size Dropdown Menu and select one
 	 * Click on text Font Dropdown Menu and select one
 	 * Click on text Colour Dropdown Menu and select one
@@ -37,6 +38,7 @@ public class JWPTest {
 	 * ensure only the middle line moves with the alignment selections.
 	 * Save As JWPTest.txt
 	 * 
+	 * Close JWP
 	 * 
 	 */
 

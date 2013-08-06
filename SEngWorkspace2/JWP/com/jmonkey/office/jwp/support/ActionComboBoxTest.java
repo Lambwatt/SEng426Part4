@@ -319,9 +319,9 @@ public class ActionComboBoxTest {
 	 * 
 	 * Run JWP
 	 * 
-	 * Select Font DropDown Box
-	 * Select Text size DropDown Box
-	 * Select Colour DropDown Box
+	 * Select Font DropDown Box, select a font
+	 * Select Text size DropDown Box, select a text size
+	 * Select Colour DropDown Box, select a colour
 	 * 
 	 * Ensure that for each a drop down box appears
 	 * 
