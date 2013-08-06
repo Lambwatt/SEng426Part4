@@ -1,4 +1,4 @@
-#Mon Aug 05 18:16:15 PDT 2013
+#Tue Aug 06 14:18:32 PDT 2013
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false
-org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=false
+org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true

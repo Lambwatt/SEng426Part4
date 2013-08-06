@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="jmonkey.office.jwp.JWP"/>
+<fullyQualifiedTypeName name="jmonkey.office.jwp.support.editors.TEXTEditor"/>
+<fullyQualifiedTypeName name="jmonkey.office.jwp.support.editors.HTMLEditor"/>
+<fullyQualifiedTypeName name="jmonkey.office.jwp.support.editors.RTFEditor"/>
+<fullyQualifiedTypeName name="javax.swing.undo.UndoManager"/>
+<fullyQualifiedTypeName name="jmonkey.export.Registry"/>
+<fullyQualifiedTypeName name="jmonkey.office.jwp.support.Editor"/>
+</qualifiedTypeNameHistroy>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="EditorTest" project="JWP" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="jmonkey.office.jwp.support.EditorTest" time="0.608">
-    <testcase name="testEditorCreatedForText" classname="jmonkey.office.jwp.support.EditorTest" time="0.559"/>
-    <testcase name="testEditorCreatedForExtension" classname="jmonkey.office.jwp.support.EditorTest" time="0.025"/>
-    <testcase name="testUndoManagerInit" classname="jmonkey.office.jwp.support.EditorTest" time="0.011"/>
-    <testcase name="testRegistryInit" classname="jmonkey.office.jwp.support.EditorTest" time="0.013"/>
-  </testsuite>
-</testrun>
