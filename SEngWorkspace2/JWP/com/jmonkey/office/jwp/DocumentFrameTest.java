@@ -1,6 +1,9 @@
 package jmonkey.office.jwp;
 
 import static org.junit.Assert.*;
+
+import java.awt.event.FocusEvent;
+
 import jmonkey.office.jwp.support.Editor;
 
 import org.junit.Test;
@@ -19,4 +22,93 @@ public class DocumentFrameTest {
 		assertTrue("failure to handle null jwp", z!=null && z.getEditor() instanceof Editor && z.getEditor()!=null);
 	}
 
+	@Test
+	public void test_getName(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.getName();
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_internalFrameOpened(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.internalFrameOpened(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_internalFrameClosing(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.internalFrameClosing(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_internalFrameClosed(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.internalFrameClosed(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_internalFrameIconified(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.internalFrameIconified(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_internalFrameDeiconified(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.internalFrameDeiconified(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_internalFrameDeactivated(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.internalFrameDeactivated(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_focusLost(){
+		try{
+			DocumentFrame df = new DocumentFrame(null,"text/plain");
+			df.focusLost(null);
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+
+	@Test
+	public void test_activate(){
+		try{
+			DocumentFrame df = new DocumentFrame(new JWP(),"text/plain");
+			df.activate();
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
 }
