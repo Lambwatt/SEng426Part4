@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="EditorTest" project="JWP" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="jmonkey.office.jwp.support.EditorTest" time="0.915">
+    <testcase name="testEditorCreatedForText" classname="jmonkey.office.jwp.support.EditorTest" time="0.883"/>
+    <testcase name="testEditorCreatedForExtension" classname="jmonkey.office.jwp.support.EditorTest" time="0.032"/>
+  </testsuite>
+</testrun>

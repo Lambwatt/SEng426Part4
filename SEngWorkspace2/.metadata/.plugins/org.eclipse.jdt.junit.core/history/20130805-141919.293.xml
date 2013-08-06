@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="ActionComboBoxTest" project="JWP" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="jmonkey.office.jwp.support.ActionComboBoxTest" time="13.251">
+    <testcase name="testNoItems" classname="jmonkey.office.jwp.support.ActionComboBoxTest" time="0.123"/>
+    <testcase name="testEmptyList" classname="jmonkey.office.jwp.support.ActionComboBoxTest" time="12.69"/>
+    <testcase name="testValidList" classname="jmonkey.office.jwp.support.ActionComboBoxTest" time="0.402"/>
+    <testcase name="testNull" classname="jmonkey.office.jwp.support.ActionComboBoxTest" time="0.004"/>
+    <testcase name="testListWithOneInvalid" classname="jmonkey.office.jwp.support.ActionComboBoxTest" time="0.017"/>
+    <testcase name="testListOfOneInvalid" classname="jmonkey.office.jwp.support.ActionComboBoxTest" time="0.015"/>
+  </testsuite>
+</testrun>

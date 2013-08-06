@@ -2,11 +2,14 @@ package jmonkey.office.jwp.support;
 
 import static org.junit.Assert.*;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ItemListener;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
+import javax.swing.AbstractAction;
 import javax.swing.Action;
+import javax.swing.JEditorPane;
 import javax.swing.text.DefaultEditorKit;
 import javax.swing.text.StyledEditorKit;
 
@@ -101,7 +104,6 @@ public class ActionComboBoxTest {
 	
 	@Test
 	public void testListOfOneInvalid() throws RegistryFormatException {
-		System.out.println("testing");
 		JWP jwp = new JWP();
 		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
 		Action[] a = eam.createDefaultColourActions();
@@ -115,5 +117,200 @@ public class ActionComboBoxTest {
 		assertTrue("Failed emptyList construction: did not contain void", containsAll(x.getActions(),j));
 		assertTrue("Failed emptyList construction: getItemListeners did not include x", contains(x.getItemListeners(),x));
 		assertTrue("Failed emptyList construction: incorrect length of getActions", x.getActions().size()==1);
+	}
+	
+	@Test
+	public void testSelection() throws RegistryFormatException {
+		JWP jwp = new JWP();
+		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
+		Action[] a = eam.createDefaultColourActions();
+		Action[] i = new Action[3];
+		i[0] = a[0];
+		i[1] = a[1];
+		i[2] = a[2];
+		
+		ActionComboBox x = new ActionComboBox(i);
+		
+		assertNull("Failed selection of -1 index", x.getItemAt(-1));
+		assertTrue("Failed selection of middle element", x.getItemAt(1)==a[1]);
+		assertNull("Failed selection of out of bounds element", x.getItemAt(4));
+		
+		i = new Action[1];
+		i[0] = a[0];
+
+		assertTrue("Failed selection of only element", x.getItemAt(0)==a[0]);
+	}
+	
+	@Test
+	public void testAdditionOfItems() throws RegistryFormatException {
+		
+		
+		JWP jwp = new JWP();
+		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
+		Action[] a = eam.createDefaultColourActions();
+		Action[] y = new Action[3];
+		y[0] = null;
+		y[1] = a[0];
+		y[2] = a[0];
+		
+		ActionComboBox x = new ActionComboBox();
+		
+		int lastSize = x.getItemCount();
+		x.addItem(y[0]);
+		assertTrue("Failed addition of null", x.getItemCount()==lastSize);
+		x.addItem(y[1]);
+		assertTrue("Failed addition of valid action", x.getItemCount()==lastSize+1);
+		assertTrue("Failed addition of invalid action", x.getItemAt(0)==y[1]);
+		x.addItem(y[2]);	
+		assertTrue("Failed addition of invalid action",x.getItemCount()==lastSize+1);
+	
+	}
+	
+	@Test
+	public void testInsertItemAt() throws RegistryFormatException {
+		JWP jwp = new JWP();
+		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
+		Action[] a = eam.createDefaultColourActions();
+		Action[] i = new Action[2];
+		i[0] = a[0];
+		i[1] = a[1];
+
+		ActionComboBox x = new ActionComboBox(i);
+		Action[] y = new Action[3];
+		y[0] = null;
+		y[1] = a[1];
+		y[2] = a[2];
+		
+		int expectedSize = x.getItemCount();
+		
+		x.insertItemAt(y[0], 1);
+		assertTrue("Failed insertion of null element", x.getItemCount()==expectedSize);
+		
+		x.insertItemAt(y[1], 1);
+		assertTrue("Failed insertion of invalid element", x.getItemCount()==expectedSize);
+		
+		x.insertItemAt(y[2], 0);
+		expectedSize++;
+		assertTrue("Failed insertion of item at 0", x.getItemCount()==expectedSize && x.getItemAt(0)==y[2]);
+		
+		x = new ActionComboBox(i);
+		expectedSize=x.getItemCount();
+		x.insertItemAt(y[2], -1);
+		assertTrue("Failed insertion at negatve index.", x.getItemCount()==expectedSize);
+		
+		x.insertItemAt(y[2], 1);
+		expectedSize+=1;
+		assertTrue("Failed insertion of item at 1", x.getItemCount()==expectedSize && x.getItemAt(1)==y[2]);
+
+		x = new ActionComboBox(i);
+		expectedSize = x.getItemCount();
+		x.insertItemAt(y[2], 2);
+		assertTrue("Failed insertion of item at 2", x.getItemCount()==expectedSize+1 && x.getItemAt(2)==y[2]);
+
+		x = new ActionComboBox(i);
+		expectedSize = x.getItemCount();
+		x.insertItemAt(y[2], 3);
+		assertTrue("Failed insertion of item at out of bounds index", x.getItemCount()==expectedSize);
+
+		x = new ActionComboBox();
+		x.insertItemAt(y[2], 0);
+		expectedSize = 1;
+		assertTrue("Failed insertion of item to empty list", x.getItemCount()==expectedSize && x.getItemAt(0)==y[2]);
+		
+	}
+	
+	@Test
+	public void testRemoveItem()throws RegistryFormatException {
+		JWP jwp = new JWP();
+		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
+		Action[] a = eam.createDefaultColourActions();
+		Action[] i = new Action[2];
+		i[0] = a[0];
+		i[1] = a[1];
+
+		ActionComboBox x = new ActionComboBox(i);
+		
+		int expectedSize = x.getItemCount();
+		
+		Action[] y = new Action[3];
+		y[0]=null;
+		y[1] = i[0];
+		y[2]=i[0];
+		
+		x.removeItem(y[0]);
+		assertTrue("Failed removal of null.", x.getItemCount()==expectedSize);
+		x.removeItem(y[1]);
+		expectedSize-=1;
+		assertTrue("Failed removal of non-present item.", x.getItemCount()==expectedSize);
+		x.removeItem(y[2]);
+		assertTrue("Failed removal of item.", x.getItemCount()==expectedSize);
+	}
+	
+	@Test
+	public void testRemoveItemAt() throws RegistryFormatException {
+		JWP jwp = new JWP();
+		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
+		Action[] a = eam.createDefaultColourActions();
+		Action[] i = new Action[3];
+		i[0] = a[0];
+		i[1] = a[1];
+		i[2] = a[2];
+
+		ActionComboBox x = new ActionComboBox(i);
+		
+		int expectedSize = x.getItemCount();
+		
+		x.removeItemAt( 0);
+		assertTrue("Failed removal of item at 0", x.getItemCount()==expectedSize-1);
+
+		x = new ActionComboBox(i);
+		expectedSize=x.getItemCount();
+		x.removeItemAt( -1);
+		assertTrue("Failed removal at negatve index.", x.getItemCount()==expectedSize);
+		
+		x.removeItemAt(1);
+		assertTrue("Failed removal of item at 1", x.getItemCount()==expectedSize-1);
+
+		x = new ActionComboBox(i);
+		expectedSize=x.getItemCount();
+		x.removeItemAt(2);
+		assertTrue("Failed removal of item at 2", x.getItemCount()==expectedSize-1);
+
+		x = new ActionComboBox(i);
+		expectedSize=x.getItemCount();
+		x.removeItemAt(3);
+		assertTrue("Failed removal of item at out of bounds index", x.getItemCount()==expectedSize);
+
+		x = new ActionComboBox();
+		x.removeItemAt(0);
+		assertTrue("Failed removal of item from empty list", x.getItemCount()==0);
+		
+	}
+	
+	@Test
+	public void testRemoveAll()throws RegistryFormatException {
+		JWP jwp = new JWP();
+		jmonkey.office.jwp.support.EditorActionManager eam = jwp.getEditorActionManager();
+		Action[] a = eam.createDefaultColourActions();
+		
+		ActionComboBox x = new ActionComboBox();
+		
+		x.removeAllItems();
+		assertTrue("Failed removal of all from empty", x.getItemCount()==0);
+		
+		Action[] i = new Action[1];
+		i[0] = a[0];
+		x = new ActionComboBox(i);
+		//System.out.println( x.getItemCount());
+		x.removeAllItems();
+		assertTrue("Failed removal of all from list of 1", x.getItemCount()==0);
+		
+		i = new Action[2];
+		i[0] = a[0];
+		i[1] = a[1];
+		x = new ActionComboBox(i);
+		
+		x.removeAllItems();
+		assertTrue("Failed removal of all from list of 2", x.getItemCount()==0);
 	}
 }

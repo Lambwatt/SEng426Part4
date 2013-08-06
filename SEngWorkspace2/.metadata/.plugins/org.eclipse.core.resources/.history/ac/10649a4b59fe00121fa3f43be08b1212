@@ -1,0 +1,43 @@
+package jmonkey.office.jwp.support;
+
+import static org.junit.Assert.*;
+import jmonkey.office.jwp.JWP;
+import jmonkey.office.jwp.support.editors.HTMLEditor;
+import jmonkey.office.jwp.support.editors.RTFEditor;
+import jmonkey.office.jwp.support.editors.TEXTEditor;
+
+import org.junit.Test;
+
+public class EditorTest {
+
+	@Test
+	public void testEditorCreatedForText() {
+		Editor nullEditor = Editor.createEditorForContentType("text/plain", null);
+		
+		JWP jwp = new JWP();
+		Editor unexpectedEditor = Editor.createEditorForContentType("text/notAType", jwp);
+		assertTrue("failed to return default editor", unexpectedEditor instanceof TEXTEditor);
+		Editor htmlEditor = Editor.createEditorForContentType("text/html", jwp);
+		assertTrue("failed to return HTML editor", unexpectedEditor instanceof HTMLEditor);
+		Editor rtfEditor = Editor.createEditorForContentType("text/rtf", jwp);
+		assertTrue("failed to return RTF editor", unexpectedEditor instanceof RTFEditor);
+		Editor txtEditor = Editor.createEditorForContentType("text/plain", jwp);
+		assertTrue("failed to return TEXT editor", unexpectedEditor instanceof TEXTEditor);
+	}
+	
+	@Test
+	public void testEditorCreatedForExtension() {
+		Editor nullEditor = Editor.createEditorForExtension("txt", null);
+		
+		JWP jwp = new JWP();
+		Editor unexpectedEditor = Editor.createEditorForContentType("unknown", jwp);
+		assertTrue("failed to return default editor", unexpectedEditor instanceof TEXTEditor);
+		Editor htmlEditor = Editor.createEditorForContentType("html", jwp);
+		assertTrue("failed to return HTML editor", unexpectedEditor instanceof HTMLEditor);
+		Editor rtfEditor = Editor.createEditorForContentType("rtf", jwp);
+		assertTrue("failed to return RTF editor", unexpectedEditor instanceof RTFEditor);
+		Editor txtEditor = Editor.createEditorForContentType("txt", jwp);
+		assertTrue("failed to return TXT editor", unexpectedEditor instanceof TEXTEditor);
+	}
+
+}

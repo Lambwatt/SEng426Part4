@@ -1,0 +1,18 @@
+package jmonkey.office.jwp;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DocumentFrameTest {
+
+	@Test
+	public void testConstruction() {
+		JWP jwp = new JWP();
+		
+		DocumentFrame x = new DocumentFrame(null,"text/plain");
+		DocumentFrame y = new DocumentFrame(jwp,null);
+		DocumentFrame z = new DocumentFrame(jwp,"text/plain");
+	}
+
+}
