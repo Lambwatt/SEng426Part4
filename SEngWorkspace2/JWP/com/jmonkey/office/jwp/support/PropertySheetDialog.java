@@ -18,13 +18,13 @@ import javax.swing.table.AbstractTableModel;
 
 public final class PropertySheetDialog extends JDialog {
   private Properties m_properties = null;
-  private Object[] m_keys = null;
+  public Object[] m_keys = null;
 
   private boolean m_allowAdd = false;
 
-  private PairTableModel m_model = null;
+  public PairTableModel m_model = null;
 
-  private final class PairTableModel extends AbstractTableModel {
+  final class PairTableModel extends AbstractTableModel {
 
     public PairTableModel() {
       super();
@@ -130,12 +130,10 @@ public final class PropertySheetDialog extends JDialog {
       addButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           String key = JOptionPane.showInputDialog("What key you want to add?");
-          if (key != null) {
-            if (key.trim().length() > 0) {
+          if (key != null && key.trim().length() > 0) {
               m_properties.setProperty(key, "");
               m_keys = m_properties.keySet().toArray();
-              m_model.fireTableDataChanged();
-            }
+              m_model.fireTableDataChanged();            
           }
         }
       });
