@@ -17,7 +17,10 @@ import jmonkey.export.Registry;
 import jmonkey.office.jwp.support.ActionComboBox;
 
 import org.junit.Test;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 6427fa28579d20a7083de33dcaca1c228f259268
 import jmonkey.export.RegistryFormatException;
 import jmonkey.office.jwp.JWP;
 
@@ -314,4 +317,18 @@ public class ActionComboBoxTest {
 		x.removeAllItems();
 		assertTrue("Failed removal of all from list of 2", x.getItemCount()==0);
 	}
+	
+	/* Functional Test
+	 * 
+	 * Run JWP
+	 * 
+	 * Select Font DropDown Box
+	 * Select Text size DropDown Box
+	 * Select Colour DropDown Box
+	 * 
+	 * Ensure that for each a drop down box appears
+	 * 
+	 * Close JWP
+	 *
+	 */
 }

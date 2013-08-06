@@ -416,7 +416,7 @@ public final class DocumentManager extends DefaultDesktopManager implements
   }
 
 
-  protected final JWP getApp() {
+  protected final JWP getApp() {//remove this
     return p;
   }
 
