@@ -27,5 +27,30 @@ public class DocumentManagerTest {
 		fail("Expected illegal argumenttest_DocumentManager_invalid");
 
 	}
+	
+	/*
+	 * Functional Testing
+	 * 
+	 * Open JWP
+	 * Create New File
+	 * Write text to the file
+	 * Save file, name it File1.txt
+	 * Write text to the file
+	 * Save file as File2.txt
+	 * Write text to the file
+	 * Revert to changes
+	 * SaveCopy of file
+	 * Cascade Windows under window menu
+	 * Tile Windows under window menu
+	 * Minimize Windows under window menu
+	 * Close document with x
+	 * Close using file menu
+	 * Create New File
+	 * Create New File
+	 * CloseAll
+	 * Close JWP
+	 * 
+	 * If no error occured, Functional Test Passed
+	 */
 
 }
