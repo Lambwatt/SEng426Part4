@@ -87,15 +87,4 @@ public class OfficeHelp extends JFrame {
     return null;
   }
 
-  private void redirectOutput() {
-    try {
-      FileOutputStream fileOut = new FileOutputStream("Output.txt", true);
-      PrintStream thePrintStream = new PrintStream(fileOut);
-      System.setOut(thePrintStream);
-      System.setErr(thePrintStream);
-    }
-    catch (java.io.IOException ex) {
-      Code.failed(ex);
-    }
-  }
 }
