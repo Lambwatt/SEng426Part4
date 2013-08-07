@@ -39,20 +39,20 @@ final class RegistryImpl extends Registry implements Serializable {
   static final String ENCODING = "ASCII";
   
   static final String ID_STR = "ST@"; // String
-  private static final String ID_STA = "SA@"; // String Array
-  private static final String ID_OBJ = "OB@"; // Object
-  private static final String ID_OBA = "OA@"; // Object Array
-  private static final String ID_BOO = "BO@"; // boolean
-  private static final String ID_BYT = "BY@"; // byte
-  private static final String ID_BYA = "BA@"; // byte Array
-  private static final String ID_CHR = "CH@"; // char
-  private static final String ID_CHA = "CA@"; // char Array
-  private static final String ID_SHO = "SH@"; // short
-  private static final String ID_INT = "IN@"; // int
-  private static final String ID_INA = "IA@"; // int Array
-  private static final String ID_LON = "LO@"; // long
-  private static final String ID_DBL = "DO@"; // double
-  private static final String ID_FLT = "FL@"; // float
+  static final String ID_STA = "SA@"; // String Array
+  static final String ID_OBJ = "OB@"; // Object
+  static final String ID_OBA = "OA@"; // Object Array
+  static final String ID_BOO = "BO@"; // boolean
+  static final String ID_BYT = "BY@"; // byte
+  static final String ID_BYA = "BA@"; // byte Array
+  static final String ID_CHR = "CH@"; // char
+  static final String ID_CHA = "CA@"; // char Array
+  static final String ID_SHO = "SH@"; // short
+  static final String ID_INT = "IN@"; // int
+  static final String ID_INA = "IA@"; // int Array
+  static final String ID_LON = "LO@"; // long
+  static final String ID_DBL = "DO@"; // double
+  static final String ID_FLT = "FL@"; // float
 
   private boolean m_altered = false;
   private Hashtable m_groups = new Hashtable();
@@ -536,10 +536,7 @@ final class RegistryImpl extends Registry implements Serializable {
     return getBasicProperty(group, key, TYPE_STRING_SINGLE);
   }
 
-  public String[] getStringArray(String group, String key) {
-    String res = getBasicProperty(group, key, TYPE_STRING_ARRAY);
-    return (String[]) decode(res);
-  }
+  
 
   public boolean getBoolean(String group, String key) {
     Code.debug("getBoolean(\"" + group + "\", \"" + key + "\")");
@@ -565,10 +562,7 @@ final class RegistryImpl extends Registry implements Serializable {
     }
   }
 
-  public int[] getIntegerArray(String group, String key) {
-    String res = getBasicProperty(group, key, TYPE_INT_ARRAY);
-    return (int[]) decode(res);
-  }
+  
 
   public long getLong(String group, String key) {
     String res = getBasicProperty(group, key, TYPE_LONG_SINGLE).trim();
@@ -590,11 +584,7 @@ final class RegistryImpl extends Registry implements Serializable {
     }
   }
 
-  public byte[] getByteArray(String group, String key) {
-    String res = getBasicProperty(group, key, TYPE_BYTE_ARRAY);
-    return (byte[]) decode(res);
-  }
-
+  
   public char getChar(String group, String key) {
     String res = getBasicProperty(group, key, TYPE_CHAR_SINGLE).trim();
     if (res.length() != 1) {
@@ -603,10 +593,7 @@ final class RegistryImpl extends Registry implements Serializable {
     return res.charAt(0);
   }
 
-  public char[] getCharArray(String group, String key) {
-    String res = getBasicProperty(group, key, TYPE_CHAR_ARRAY);
-    return (char[]) decode(res);
-  }
+  
 
   public double getDouble(String group, String key) {
     String res = getBasicProperty(group, key, TYPE_DOUBLE_SINGLE).trim();
@@ -633,10 +620,7 @@ final class RegistryImpl extends Registry implements Serializable {
     return decode(res);
   }
 
-  public Object[] getObjectArray(String group, String key) {
-    String res = getBasicProperty(group, key, TYPE_OBJECT_ARRAY);
-    return (Object[]) decode(res);
-  }
+  
 
   public short getShort(String group, String key) {
     String res = getBasicProperty(group, key, TYPE_SHORT_SINGLE).trim();
@@ -656,9 +640,7 @@ final class RegistryImpl extends Registry implements Serializable {
     setBasicProperty(group, key, value, TYPE_STRING_SINGLE);
   }
 
-  public void setProperty(String group, String key, String[] value) {
-    setBasicProperty(group, key, encode(value), TYPE_STRING_ARRAY);
-  }
+ 
 
   public void setProperty(String group, String key, boolean value) {
     setBasicProperty(group, key, Boolean.toString(value), TYPE_BOOLEAN_SINGLE);
@@ -668,9 +650,7 @@ final class RegistryImpl extends Registry implements Serializable {
     setBasicProperty(group, key, Integer.toString(value), TYPE_INT_SINGLE);
   }
 
-  public void setProperty(String group, String key, int[] value) {
-    setBasicProperty(group, key, encode(value), TYPE_INT_ARRAY);
-  }
+  
 
   public void setProperty(String group, String key, long value) {
     setBasicProperty(group, key, Long.toString(value), TYPE_LONG_SINGLE);
@@ -680,17 +660,13 @@ final class RegistryImpl extends Registry implements Serializable {
     setBasicProperty(group, key, Byte.toString(value), TYPE_BYTE_SINGLE);
   }
 
-  public void setProperty(String group, String key, byte[] value) {
-    setBasicProperty(group, key, encode(value), TYPE_BYTE_ARRAY);
-  }
+ 
 
   public void setProperty(String group, String key, char value) {
     setBasicProperty(group, key, Character.toString(value), TYPE_CHAR_SINGLE);
   }
 
-  public void setProperty(String group, String key, char[] value) {
-    setBasicProperty(group, key, encode(value), TYPE_CHAR_ARRAY);
-  }
+  
 
   public void setProperty(String group, String key, double value) {
     setBasicProperty(group, key, Double.toString(value), TYPE_DOUBLE_SINGLE);
@@ -704,9 +680,7 @@ final class RegistryImpl extends Registry implements Serializable {
     setBasicProperty(group, key, encode(value), TYPE_OBJECT_SINGLE);
   }
 
-  public void setProperty(String group, String key, Serializable[] value) {
-    setBasicProperty(group, key, encode(value), TYPE_OBJECT_ARRAY);
-  }
+  
 
   public void setProperty(String group, String key, short value) {
     setBasicProperty(group, key, Short.toString(value), TYPE_SHORT_SINGLE);
@@ -853,4 +827,69 @@ final class RegistryImpl extends Registry implements Serializable {
       loadData();
     }
   }
+
+@Override
+public byte[] getByteArray(String group, String key)
+		throws RegistryPropertyException {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public char[] getCharArray(String group, String key)
+		throws RegistryPropertyException {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public int[] getIntegerArray(String group, String key)
+		throws RegistryPropertyException {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public Object[] getObjectArray(String group, String key)
+		throws RegistryPropertyException {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public String[] getStringArray(String group, String key)
+		throws RegistryPropertyException {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public void setProperty(String group, String key, byte[] value) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void setProperty(String group, String key, char[] value) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void setProperty(String group, String key, int[] value) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void setProperty(String group, String key, Serializable[] value) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void setProperty(String group, String key, String[] value) {
+	// TODO Auto-generated method stub
+	
+}
 }

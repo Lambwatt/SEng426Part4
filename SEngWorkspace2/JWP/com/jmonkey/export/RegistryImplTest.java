@@ -418,6 +418,70 @@ public class RegistryImplTest {
 		RegistryImpl reg = new RegistryImpl(version);
 		String returnVal = reg.typeToMarker(Registry.TYPE_STRING_SINGLE);
 		assertEquals(RegistryImpl.ID_STR,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_STRING_ARRAY);
+		assertEquals(RegistryImpl.ID_STA,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_OBJECT_SINGLE);
+		assertEquals(RegistryImpl.ID_OBJ,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_OBJECT_ARRAY);
+		assertEquals(RegistryImpl.ID_OBA,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_BOOLEAN_SINGLE);
+		assertEquals(RegistryImpl.ID_BOO,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_BYTE_SINGLE);
+		assertEquals(RegistryImpl.ID_BYT,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_BYTE_ARRAY);
+		assertEquals(RegistryImpl.ID_BYA,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_CHAR_SINGLE);
+		assertEquals(RegistryImpl.ID_CHR,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_CHAR_ARRAY);
+		assertEquals(RegistryImpl.ID_CHA,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_SHORT_SINGLE);
+		assertEquals(RegistryImpl.ID_SHO,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_INT_SINGLE);
+		assertEquals(RegistryImpl.ID_INT,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_INT_ARRAY);
+		assertEquals(RegistryImpl.ID_INA,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_LONG_SINGLE);
+		assertEquals(RegistryImpl.ID_LON,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_DOUBLE_SINGLE);
+		assertEquals(RegistryImpl.ID_DBL,returnVal);
+		returnVal = reg.typeToMarker(Registry.TYPE_FLOAT_SINGLE);
+		assertEquals(RegistryImpl.ID_FLT,returnVal);
+	}
+	
+	@Test
+	public void test_MarkerToType_valid() {
+		int[] version = {1};
+		RegistryImpl reg = new RegistryImpl(version);
+		int returnVal = reg.markerToType(RegistryImpl.ID_STR);
+		assertEquals(Registry.TYPE_STRING_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_STA);
+		assertEquals(Registry.TYPE_STRING_ARRAY,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_OBJ);
+		assertEquals(Registry.TYPE_OBJECT_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_OBA);
+		assertEquals(Registry.TYPE_OBJECT_ARRAY,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_BOO);
+		assertEquals(Registry.TYPE_BOOLEAN_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_BYT);
+		assertEquals(Registry.TYPE_BYTE_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_BYA);
+		assertEquals(Registry.TYPE_BYTE_ARRAY,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_CHR);
+		assertEquals(Registry.TYPE_CHAR_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_CHA);
+		assertEquals(Registry.TYPE_CHAR_ARRAY,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_SHO);
+		assertEquals(Registry.TYPE_SHORT_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_INT);
+		assertEquals(Registry.TYPE_INT_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_INA);
+		assertEquals(Registry.TYPE_INT_ARRAY,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_LON);
+		assertEquals(Registry.TYPE_LONG_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_DBL);
+		assertEquals(Registry.TYPE_DOUBLE_SINGLE,returnVal);
+		returnVal = reg.markerToType(RegistryImpl.ID_FLT);
+		assertEquals(RegistryImpl.TYPE_FLOAT_SINGLE,returnVal);
 	}
 	
 	@Test
@@ -591,5 +655,36 @@ public class RegistryImplTest {
 			fail("unexpected InvocationTargetException in test_stringToVersion");
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void test_getters(){
+		int[] version = {1};
+		RegistryImpl reg = new RegistryImpl(version);
+		
+		reg.setProperty("group", "bool", false);
+		reg.setProperty("group", "int", 0);
+		reg.setProperty("group", "long", (long)0);
+		reg.setProperty("group", "float", (float)0);
+		reg.setProperty("group", "byte", (byte)0);
+		reg.setProperty("group", "short", (short)0);
+		reg.setProperty("group", "double", (double)0);
+		//reg.setProperty("group", "obj", new Integer(0));
+
+		
+		assertTrue("return does not fail as predicted",reg.getType("group", "bool")==0);
+		assertTrue("return does not fail as predicted",reg.getBoolean("group", "bool")==false);
+		assertTrue("return does not fail as predicted",reg.getInteger("group", "int")==0);
+		
+		assertTrue("return does not fail as predicted",reg.getLong("group", "long")==0);
+		assertTrue("return does not fail as predicted",reg.getByte("group", "byte")==0);
+		assertTrue("return does not fail as predicted",reg.getShort("group", "short")==0);
+
+		assertTrue("return does not fail as predicted",reg.getChar("group", "char")==0);
+
+		assertTrue("return does not fail as predicted",reg.getDouble("group", "double")==0);
+		assertTrue("return does not fail as predicted",reg.getFloat("group", "float")==0);
+		//assertTrue("return does not fail as predicted",reg.getObject("group", "obj")!=null);
+
 	}
 }

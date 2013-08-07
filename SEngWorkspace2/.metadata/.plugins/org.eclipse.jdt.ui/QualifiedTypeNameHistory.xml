@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="javax.swing.undo.UndoManager"/>
 <fullyQualifiedTypeName name="jmonkey.export.Registry"/>
 <fullyQualifiedTypeName name="jmonkey.office.jwp.support.Editor"/>
+<fullyQualifiedTypeName name="jmonkey.office.jwp.support.ActionComboBox"/>
 </qualifiedTypeNameHistroy>

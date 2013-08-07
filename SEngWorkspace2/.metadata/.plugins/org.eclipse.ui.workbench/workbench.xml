@@ -23,7 +23,7 @@
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.maintainj.diagram.UMLEditor" itemType="typePlaceholder" x="45" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -37,17 +37,57 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EditorActionManager.java" partName="EditorActionManager.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/support/EditorActionManager.java" title="EditorActionManager.java" tooltip="JWP/com/jmonkey/office/jwp/support/EditorActionManager.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/office/jwp/support/EditorActionManager.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="16174" selectionTopPixel="6820"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="22933" selectionTopPixel="10620"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionComboBoxTest.java" partName="ActionComboBoxTest.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java" title="ActionComboBoxTest.java" tooltip="JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionComboBoxTest.java" partName="ActionComboBoxTest.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java" title="ActionComboBoxTest.java" tooltip="JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="601"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="486" selectionTopPixel="210"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegistryFormatException.java" partName="RegistryFormatException.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/export/RegistryFormatException.java" title="RegistryFormatException.java" tooltip="JWP/com/jmonkey/export/RegistryFormatException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/export/RegistryFormatException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentManagerTest.java" partName="DocumentManagerTest.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/DocumentManagerTest.java" title="DocumentManagerTest.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentManagerTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/office/jwp/DocumentManagerTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="581" selectionTopPixel="360"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionComboBox.java" partName="ActionComboBox.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/support/ActionComboBox.java" title="ActionComboBox.java" tooltip="JWP/com/jmonkey/office/jwp/support/ActionComboBox.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/office/jwp/support/ActionComboBox.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="659" selectionTopPixel="300"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentFrameTest.java" partName="DocumentFrameTest.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/DocumentFrameTest.java" title="DocumentFrameTest.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentFrameTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/office/jwp/DocumentFrameTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="23" selectionOffset="241" selectionTopPixel="285"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="URLImageSource.class" partName="URLImageSource.class" title="URLImageSource.class" tooltip="sun.awt.image.URLImageSource" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=JWP/\/System\/Library\/Java\/JavaVirtualMachines\/1.6.0.jdk\/Contents\/Classes\/classes.jar&lt;sun.awt.image(URLImageSource.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ImageFetcher.class" partName="ImageFetcher.class" title="ImageFetcher.class" tooltip="sun.awt.image.ImageFetcher" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=JWP/\/System\/Library\/Java\/JavaVirtualMachines\/1.6.0.jdk\/Contents\/Classes\/classes.jar&lt;sun.awt.image(ImageFetcher.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegistryImplTest.java" partName="RegistryImplTest.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/export/RegistryImplTest.java" title="RegistryImplTest.java" tooltip="JWP/com/jmonkey/export/RegistryImplTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/export/RegistryImplTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="43" selectionOffset="16526" selectionTopPixel="6600"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentFrame.java" partName="DocumentFrame.java" path="/Users/mjpattie/Documents/SEng426Part4/SEngWorkspace2/JWP/com/jmonkey/office/jwp/DocumentFrame.java" title="DocumentFrame.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentFrame.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JWP/com/jmonkey/office/jwp/DocumentFrame.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="2571" selectionTopPixel="1213"/>
 </editor>
 </editors>
 <views>
@@ -59,9 +99,8 @@
 </view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="4" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
-<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="5" org.eclipse.search.resultpage.layout="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
@@ -99,6 +138,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (100 of 329 items)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -284,9 +326,9 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.30479705" ratioLeft="413" ratioRight="942" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7477064" ratioLeft="489" ratioRight="165" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.3195572" ratioLeft="433" ratioRight="922" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.58409786" ratioLeft="382" ratioRight="272" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.mountainminds.eclemma.ui.CoverageView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -450,23 +492,32 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.dltk.ui.ScriptExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74885845" ratioLeft="492" ratioRight="165" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74885845" ratioLeft="492" ratioRight="165" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="com.mountainminds.eclemma.ui.CoverageView" label="Coverage"/>
@@ -475,7 +526,8 @@
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -484,17 +536,23 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.56378603" ratioLeft="274" ratioRight="212" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5690037" ratioLeft="771" ratioRight="584" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5690037" ratioLeft="771" ratioRight="584" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -506,165 +564,170 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/ActionComboBox.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/EditorTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/Editor.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/JWPTest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentFrameTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentFrame.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/EditorActionManager.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentManager.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/EditorActionManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/export/RegistryFormatException.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentManagerTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/support/ActionComboBox.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentFrameTest.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=JWP/\/System\/Library\/Java\/JavaVirtualMachines\/1.6.0.jdk\/Contents\/Classes\/classes.jar&lt;sun.awt.image(URLImageSource.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=JWP/\/System\/Library\/Java\/JavaVirtualMachines\/1.6.0.jdk\/Contents\/Classes\/classes.jar&lt;sun.awt.image(ImageFetcher.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/export/RegistryImplTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/JWP/com/jmonkey/office/jwp/DocumentFrame.java"/>
 </editors>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="1288" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="2419" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="435" y="79"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="1236" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="789" y="80"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="2421" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="2419" y="0"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="1168" y="0"/>
-</item>
-<item historyLabel="ActionComboBox.java" index="0">
-<position info="not_deleted" x="1402" y="0"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="5489" y="0"/>
-</item>
-<item historyLabel="ActionComboBox.java" index="0">
-<position info="not_deleted" x="1402" y="0"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="5489" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="2106" y="0"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="5489" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="2412" y="0"/>
-</item>
-<item historyLabel="JWPTest.java" index="3">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="EditorTest.java" index="1">
-<position info="not_deleted" x="2318" y="98"/>
-</item>
-<item historyLabel="JWPTest.java" index="3">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="JWPTest.java" index="3">
-<position info="not_deleted" x="216" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="DocumentFrame.java" index="5">
-<position info="not_deleted" x="2822" y="8"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="225" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="286" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="285" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="635" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="644" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="332" y="0"/>
-</item>
-<item historyLabel="DocumentFrame.java" index="5">
-<position info="not_deleted" x="2822" y="8"/>
-</item>
-<item historyLabel="DocumentFrame.java" index="5">
-<position info="not_deleted" x="886" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="231" y="58"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="3066" y="60"/>
-</item>
-<item historyLabel="DocumentFrame.java" index="5">
-<position info="not_deleted" x="886" y="0"/>
-</item>
-<item historyLabel="DocumentFrame.java" index="5">
-<position info="not_deleted" x="879" y="0"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="3066" y="60"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="231" y="58"/>
-</item>
-<item historyLabel="Editor.java" index="2">
-<position info="not_deleted" x="3066" y="60"/>
-</item>
-<item historyLabel="DocumentFrame.java" index="5">
-<position info="not_deleted" x="866" y="0"/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
+<item historyLabel="DocumentFrameTest.java" index="0">
 <position info="not_deleted" x="468" y="0"/>
 </item>
-<item historyLabel="EditorActionManager.java" index="6">
-<position/>
-</item>
-<item historyLabel="DocumentFrameTest.java" index="4">
-<position info="not_deleted" x="468" y="0"/>
-</item>
-<item historyLabel="EditorActionManager.java" index="6">
+<item historyLabel="EditorActionManager.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DocumentManager.java" index="7">
+<item historyLabel="DocumentManager.java" index="2">
 <position info="not_deleted" x="9752" y="4"/>
 </item>
-<item historyLabel="EditorActionManager.java" index="6">
+<item historyLabel="EditorActionManager.java" index="1">
 <position info="not_deleted" x="36259" y="0"/>
 </item>
-<item historyLabel="EditorActionManager.java" index="6">
+<item historyLabel="EditorActionManager.java" index="1">
 <position info="not_deleted" x="16174" y="0"/>
 </item>
-<item historyLabel="ActionComboBoxTest.java" index="8">
+<item historyLabel="ActionComboBoxTest.java" index="3">
 <position info="not_deleted" x="519" y="0"/>
 </item>
-<item historyLabel="EditorActionManager.java" index="6">
+<item historyLabel="EditorActionManager.java" index="1">
 <position info="not_deleted" x="16174" y="0"/>
 </item>
-<item active="true" historyLabel="ActionComboBoxTest.java" index="8">
+<item historyLabel="ActionComboBoxTest.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="EditorActionManager.java" index="4">
+<position info="not_deleted" x="23482" y="0"/>
+</item>
+<item historyLabel="DocumentManager.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="RegistryFormatException.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="DocumentManagerTest.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DocumentManager.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="ActionComboBox.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="ActionComboBox.java" index="8">
+<position info="not_deleted" x="858" y="0"/>
+</item>
+<item historyLabel="DocumentManager.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="DocumentManager.java" index="5">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item historyLabel="ActionComboBox.java" index="8">
+<position info="not_deleted" x="659" y="0"/>
+</item>
+<item historyLabel="DocumentManager.java" index="5">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="DocumentManager.java" index="5">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position/>
+</item>
+<item historyLabel="DocumentManagerTest.java" index="7">
+<position info="not_deleted" x="581" y="0"/>
+</item>
+<item historyLabel="DocumentFrameTest.java" index="9">
+<position info="not_deleted" x="205" y="23"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position info="not_deleted" x="905" y="0"/>
+</item>
+<item historyLabel="EditorActionManager.java" index="4">
+<position info="not_deleted" x="23824" y="0"/>
+</item>
+<item historyLabel="DocumentManagerTest.java" index="7">
+<position info="not_deleted" x="581" y="0"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position info="not_deleted" x="486" y="0"/>
+</item>
+<item historyLabel="URLImageSource.class" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ImageFetcher.class" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="RegistryImplTest.java" index="12">
+<position info="not_deleted" x="334" y="23"/>
+</item>
+<item historyLabel="RegistryImplTest.java" index="12">
+<position info="not_deleted" x="16526" y="43"/>
+</item>
+<item historyLabel="DocumentFrameTest.java" index="9">
+<position info="not_deleted" x="241" y="23"/>
+</item>
+<item historyLabel="ImageFetcher.class" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="RegistryImplTest.java" index="12">
+<position info="not_deleted" x="16526" y="43"/>
+</item>
+<item historyLabel="DocumentFrameTest.java" index="9">
+<position info="not_deleted" x="241" y="23"/>
+</item>
+<item historyLabel="ActionComboBoxTest.java" index="3">
+<position info="not_deleted" x="486" y="0"/>
+</item>
+<item historyLabel="EditorActionManager.java" index="4">
+<position info="not_deleted" x="22933" y="0"/>
+</item>
+<item historyLabel="ActionComboBox.java" index="8">
+<position info="not_deleted" x="659" y="0"/>
+</item>
+<item historyLabel="DocumentFrame.java" index="13">
+<position info="not_deleted" x="2571" y="10"/>
+</item>
+<item active="true" historyLabel="DocumentFrameTest.java" index="9">
+<position info="not_deleted" x="241" y="23"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -684,17 +747,38 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentFrame.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentFrame.java">
+<persistable path="/JWP/com/jmonkey/office/jwp/DocumentFrame.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegistryImplTest.java" tooltip="JWP/com/jmonkey/export/RegistryImplTest.java">
+<persistable path="/JWP/com/jmonkey/export/RegistryImplTest.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ImageFetcher.class" tooltip="sun.awt.image.ImageFetcher">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=JWP/\/System\/Library\/Java\/JavaVirtualMachines\/1.6.0.jdk\/Contents\/Classes\/classes.jar&lt;sun.awt.image(ImageFetcher.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="URLImageSource.class" tooltip="sun.awt.image.URLImageSource">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=JWP/\/System\/Library\/Java\/JavaVirtualMachines\/1.6.0.jdk\/Contents\/Classes\/classes.jar&lt;sun.awt.image(URLImageSource.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentFrameTest.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentFrameTest.java">
+<persistable path="/JWP/com/jmonkey/office/jwp/DocumentFrameTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionComboBox.java" tooltip="JWP/com/jmonkey/office/jwp/support/ActionComboBox.java">
+<persistable path="/JWP/com/jmonkey/office/jwp/support/ActionComboBox.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentManagerTest.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentManagerTest.java">
+<persistable path="/JWP/com/jmonkey/office/jwp/DocumentManagerTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegistryFormatException.java" tooltip="JWP/com/jmonkey/export/RegistryFormatException.java">
+<persistable path="/JWP/com/jmonkey/export/RegistryFormatException.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentManager.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentManager.java">
+<persistable path="/JWP/com/jmonkey/office/jwp/DocumentManager.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ActionComboBoxTest.java" tooltip="JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java">
 <persistable path="/JWP/com/jmonkey/office/jwp/support/ActionComboBoxTest.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EditorActionManager.java" tooltip="JWP/com/jmonkey/office/jwp/support/EditorActionManager.java">
 <persistable path="/JWP/com/jmonkey/office/jwp/support/EditorActionManager.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentManager.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentManager.java">
-<persistable path="/JWP/com/jmonkey/office/jwp/DocumentManager.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentFrameTest.java" tooltip="JWP/com/jmonkey/office/jwp/DocumentFrameTest.java">
-<persistable path="/JWP/com/jmonkey/office/jwp/DocumentFrameTest.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JWPTest.java" tooltip="JWP/com/jmonkey/office/jwp/JWPTest.java">
 <persistable path="/JWP/com/jmonkey/office/jwp/JWPTest.java"/>
@@ -707,12 +791,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MiniJWP.java" tooltip="JWP/com/jmonkey/office/jwp/support/MiniJWP.java">
 <persistable path="/JWP/com/jmonkey/office/jwp/support/MiniJWP.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Code.java" tooltip="JWP/com/jmonkey/office/jwp/support/Code.java">
-<persistable path="/JWP/com/jmonkey/office/jwp/support/Code.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ColourPropertySheet.java" tooltip="JWP/com/jmonkey/office/jwp/ColourPropertySheet.java">
-<persistable path="/JWP/com/jmonkey/office/jwp/ColourPropertySheet.java"/>
 </file>
 </mruList>
 </workbench>

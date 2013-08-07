@@ -2,7 +2,10 @@ package jmonkey.office.jwp;
 
 import static org.junit.Assert.*;
 
+import java.awt.Component;
 import java.awt.event.FocusEvent;
+
+import javax.swing.JButton;
 
 import jmonkey.office.jwp.support.Editor;
 
@@ -107,6 +110,16 @@ public class DocumentFrameTest {
 		try{
 			DocumentFrame df = new DocumentFrame(new JWP(),"text/plain");
 			df.activate();
+		}catch(Exception e){
+			fail("unknown exception found " + e.getMessage());
+		}
+	}
+	
+	@Test
+	public void test_focus_gained(){
+		try{
+			DocumentFrame df = new DocumentFrame(new JWP(),"text/plain");
+			df.focusGained(new FocusEvent(new JButton(), 0, false));
 		}catch(Exception e){
 			fail("unknown exception found " + e.getMessage());
 		}
