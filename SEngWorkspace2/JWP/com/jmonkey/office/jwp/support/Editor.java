@@ -86,18 +86,16 @@ public abstract class Editor extends JPanel {
     public abstract void run();
   }
 
-  public final void activate() {
-    this.requestFocus();
-    m_editorActionManager.activate(this);
-    Code.debug("Activated editor: " + this);
-  }
 
   public abstract void append(File file) throws IOException;
+  
+  /**
+   * Returns the content type as a MIME string.
+   */
+  public abstract String[] getFileExtensions();
 
-  public final void deactivate() {
-    m_editorActionManager.deactivate(this);
-  }
-
+  public abstract MutableAttributeSet getInputAttributes();
+  
   public abstract void documentSetSelection(int start, int length, 
       boolean wordsOnly);
 
@@ -107,12 +105,67 @@ public abstract class Editor extends JPanel {
   public abstract String getContentType();
 
   public abstract Element getCurrentParagraph();
+
+  public abstract JEditorPane getTextComponent();
   
+  public abstract Element getCurrentRun();
+  
+
+  public abstract void insert(File file, int position) throws IOException;
+
+  /**
+   * Has the document changed since we loaded/created it?
+   * 
+   * @return boolean
+   */
+  public abstract boolean isChanged();
+
+  /**
+   * Does the document contain any data?
+   * 
+   */
+  public abstract boolean isEmpty();
+
+  /**
+   * Does the document contain formatting, or can we write it as plain text
+   * without loosing anything.
+   */
+  public abstract boolean isFormatted();
+
+  /**
+   * Does the document represent a new file?
+   * 
+   * @return boolean
+   */
+  public abstract boolean isNew();
+
+  public abstract void read(File file) throws IOException;
+
+  /**
+   * Set the document changed flag.
+   * @param changed boolean
+   */
+  public abstract void setChanged(boolean changed);
+
+  public abstract void setCurrentParagraph(Element paragraph);
+
+  public abstract void setCurrentRun(Element run);
+
+  public abstract void write(File file) throws IOException;
+  
+  public final void activate() {
+	    this.requestFocus();
+	    m_editorActionManager.activate(this);
+	    Code.debug("Activated editor: " + this);
+	  }
+
+  public final void deactivate() {
+	  m_editorActionManager.deactivate(this);
+	}
+
   public final EditorActionManager getEditorActionManager() {
     return m_editorActionManager;
   }
-
-  public abstract Element getCurrentRun();
 
   public static Editor createEditorForContentType(String contentType,
                                                   JWP app) {
@@ -163,13 +216,6 @@ public abstract class Editor extends JPanel {
   public final File getFile() {
     return m_file;
   }
-
-  /**
-   * Returns the content type as a MIME string.
-   */
-  public abstract String[] getFileExtensions();
-
-  public abstract MutableAttributeSet getInputAttributes();
 
   /**
    * Creates the PopUp Menu for our editors
@@ -230,8 +276,6 @@ public abstract class Editor extends JPanel {
     };
   }
 
-  public abstract JEditorPane getTextComponent();
-
   public final UndoManager getUndoManager() {
     if (m_undoManager == null) {
       m_undoManager = new UndoManager();
@@ -247,49 +291,7 @@ public abstract class Editor extends JPanel {
     return (m_file != null);
   }
 
-  public abstract void insert(File file, int position) throws IOException;
-
-  /**
-   * Has the document changed since we loaded/created it?
-   * 
-   * @return boolean
-   */
-  public abstract boolean isChanged();
-
-  /**
-   * Does the document contain any data?
-   * 
-   */
-  public abstract boolean isEmpty();
-
-  /**
-   * Does the document contain formatting, or can we write it as plain text
-   * without loosing anything.
-   */
-  public abstract boolean isFormatted();
-
-  /**
-   * Does the document represent a new file?
-   * 
-   * @return boolean
-   */
-  public abstract boolean isNew();
-
-  public abstract void read(File file) throws IOException;
-
-  /**
-   * Set the document changed flag.
-   * @param changed boolean
-   */
-  public abstract void setChanged(boolean changed);
-
-  public abstract void setCurrentParagraph(Element paragraph);
-
-  public abstract void setCurrentRun(Element run);
-
   public final void setFile(File file) {
-    m_file = file;
-  }
-
-  public abstract void write(File file) throws IOException;
+	    m_file = file;
+	  }
 }
