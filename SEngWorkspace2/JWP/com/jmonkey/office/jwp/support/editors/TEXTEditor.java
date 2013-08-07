@@ -377,14 +377,6 @@ public final class TEXTEditor extends Editor implements MouseListener,
     m_editor.requestFocus();
   }
 
-  public final void setCaretBlinkRate(int rate) {
-    m_editor.getCaret().setBlinkRate(rate);
-  }
-
-  public final void setCaretColor(Color colour) {
-    m_editor.setCaretColor(colour);
-  }
-
   public final void setChanged(boolean changed) {
     m_changed = changed;
     hasBeenActivated(this);
@@ -398,9 +390,6 @@ public final class TEXTEditor extends Editor implements MouseListener,
     m_currentRun = run;
   }
 
-  public final void setSelectionColor(Color colour) {
-    m_editor.setSelectionColor(colour);
-  }
 
   public void write(File file) throws IOException {
     EditorActionManager.threads(new FWThread(file) {
