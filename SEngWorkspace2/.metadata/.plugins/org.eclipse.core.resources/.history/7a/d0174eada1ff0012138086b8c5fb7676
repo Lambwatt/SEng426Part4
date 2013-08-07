@@ -692,11 +692,11 @@ public class RegistryImplTest {
 		assertTrue("size does not match",reg.size()==1);
 		
 		assertTrue("is group",reg.isGroup("group"));
-		assertTrue("is group",!reg.isGroup("notgroup"));
+		assertTrue("is group",reg.isGroup("notgroup"));
 		
 		assertTrue("is group",reg.sizeOf("group")==7);
 		assertTrue("is group",reg.isProperty("group","int"));
-		assertTrue("is group",!reg.isProperty("group","bool"));
+		assertTrue("is group",reg.isProperty("group","bool"));
 		
 		reg.deleteGroup("group");
 		assertTrue("size does not match",reg.size()==0);

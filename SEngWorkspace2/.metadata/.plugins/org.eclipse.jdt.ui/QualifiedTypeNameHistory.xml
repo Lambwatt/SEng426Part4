@@ -8,4 +8,6 @@
 <fullyQualifiedTypeName name="jmonkey.export.Registry"/>
 <fullyQualifiedTypeName name="jmonkey.office.jwp.support.Editor"/>
 <fullyQualifiedTypeName name="jmonkey.office.jwp.support.ActionComboBox"/>
+<fullyQualifiedTypeName name="java.awt.Component"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
 </qualifiedTypeNameHistroy>
