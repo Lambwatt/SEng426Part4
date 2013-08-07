@@ -115,39 +115,6 @@ public class RegistryImplTest {
 	}
 	
 	@Test
-	public void test_stringToVersion_null(){
-		try {
-			Class<RegistryImpl> registryImpl = RegistryImpl.class;
-	        Class cls[] = new Class[] { int[].class };
-	        Constructor<RegistryImpl> constructor = registryImpl.getDeclaredConstructor(cls);
-			Method registryImplMethod;
-			registryImplMethod = registryImpl.getDeclaredMethod("stringToVersion",String.class);			
-			registryImplMethod.setAccessible(true);
-			Object registryImplObject = constructor.newInstance(new int[]{1});
-			Object returnValue = registryImplMethod.invoke(registryImplObject, null);
-			assertArrayEquals(null, (int[])returnValue);
-		} catch (SecurityException e) {
-			fail("unexpected SecurityException in test_stringToVersion");
-			e.printStackTrace();
-		} catch (NoSuchMethodException e) {
-			fail("unexpected NoSuchMethodException in test_stringToVersion");
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			fail("unexpected InstantiationException in test_stringToVersion");
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			fail("unexpected IllegalAccessException in test_stringToVersion");
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			fail("unexpected IllegalArgumentException in test_stringToVersion");
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			fail("unexpected InvocationTargetException in test_stringToVersion");
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
 	public void test_versionToString_valid(){
 		try {
 			Class<RegistryImpl> registryImpl = RegistryImpl.class;
