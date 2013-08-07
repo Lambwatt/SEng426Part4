@@ -69,16 +69,6 @@ public final class ActionComboBox extends JComboBox implements ItemListener {
 	  }
   }
   
-  public void itemStateChanged(ItemEvent e) {
-    String name = (String) e.getItem();
-    Action action = (Action) m_actions.get(name);
-    if (action != null) {
-      ActionEvent event = 
-        new ActionEvent(this, ActionEvent.ACTION_PERFORMED, name);
-      action.actionPerformed(event);
-    }
-  }
-  
   public void removeAllItems() {
     m_actions.clear();
     super.removeAllItems();
