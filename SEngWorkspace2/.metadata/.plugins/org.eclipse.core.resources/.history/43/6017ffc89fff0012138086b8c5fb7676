@@ -669,7 +669,7 @@ public class RegistryImplTest {
 		reg.setProperty("group", "byte", (byte)0);
 		reg.setProperty("group", "short", (short)0);
 		reg.setProperty("group", "double", (double)0);
-		reg.setProperty("group", "char", '0');
+		reg.setProperty("group", "char", (double)0);
 		//reg.setProperty("group", "obj", new Integer(0));
 
 		
@@ -681,27 +681,11 @@ public class RegistryImplTest {
 		assertTrue("return does not fail as predicted",reg.getByte("group", "byte")==0);
 		assertTrue("return does not fail as predicted",reg.getShort("group", "short")==0);
 
-		assertTrue("return does not fail as predicted",reg.getChar("group", "char")=='0');
+		assertTrue("return does not fail as predicted",reg.getChar("group", "char")==0);
 
 		assertTrue("return does not fail as predicted",reg.getDouble("group", "double")==0);
 		assertTrue("return does not fail as predicted",reg.getFloat("group", "float")==0);
 		//assertTrue("return does not fail as predicted",reg.getObject("group", "obj")!=null);
 
-		assertTrue("size does not match",reg.size()==1);
-		reg.deleteProperty("group", "bool");
-		assertTrue("size does not match",reg.size()==1);
-		
-		assertTrue("is group",reg.isGroup("group"));
-		assertTrue("is group",!reg.isGroup("notgroup"));
-		
-		assertTrue("is group",reg.sizeOf("group")==7);
-		assertTrue("is group",reg.isProperty("group","int"));
-		assertTrue("is group",!reg.isProperty("group","bool"));
-		
-		reg.deleteGroup("group");
-		assertTrue("size does not match",reg.size()==0);
-		reg.deleteAll();
-		assertTrue("size does not match",reg.size()==0);
-		//assertTrue("return does not fail as predicted",reg.getBoolean("group", "bool")==);
 	}
 }
