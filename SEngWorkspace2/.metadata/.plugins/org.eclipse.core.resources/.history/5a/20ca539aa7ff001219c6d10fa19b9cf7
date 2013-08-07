@@ -795,22 +795,21 @@ public class RegistryImplTest {
 		reg.setProperty("group", "double", (double)0);
 		reg.setProperty("group", "char", '0');
 		
-		reg.setFile(new File("test.txt"));
-		reg.setFile(new File("test.txt"));
-		assertTrue("reag has file set",reg.getFile()!=null);
-		
 		try {
 			String result;
 			Writer writer = new StringWriter();
 			reg.write(writer);
 			//writer.write(result);
-			result = writer.toString();
+			result = writer.toString()
 			reg.read(new StringReader(result));
 		} catch (IOException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		
+		reg.setFile(new File("test.txt"));
+		reg.setFile(new File("test.txt"));
+		assertTrue("reag has file set",reg.getFile()!=null);
 		
 		
 	}

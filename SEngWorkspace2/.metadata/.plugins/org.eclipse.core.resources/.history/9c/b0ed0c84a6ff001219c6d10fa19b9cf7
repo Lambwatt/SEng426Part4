@@ -7,8 +7,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
-import java.io.StringWriter;
-import java.io.Writer;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -711,7 +709,12 @@ public class RegistryImplTest {
 		assertTrue("is group",!reg.isProperty("group","bool"));
 		reg.referenceGroup("group");
 		reg.toString();
-		
+		try {
+			reg.read(new StringReader(" "));
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		reg.deleteGroup("group");
 		assertTrue("size does not match",reg.size()==1);
 		assertTrue("size does not match",reg.getGroups()!=null);
@@ -785,33 +788,6 @@ public class RegistryImplTest {
 		}catch( Exception e){
 			
 		}
-		
-		reg.setProperty("group", "bool", false);
-		reg.setProperty("group", "int", 0);
-		reg.setProperty("group", "long", (long)0);
-		reg.setProperty("group", "float", (float)0);
-		reg.setProperty("group", "byte", (byte)0);
-		reg.setProperty("group", "short", (short)0);
-		reg.setProperty("group", "double", (double)0);
-		reg.setProperty("group", "char", '0');
-		
-		reg.setFile(new File("test.txt"));
-		reg.setFile(new File("test.txt"));
-		assertTrue("reag has file set",reg.getFile()!=null);
-		
-		try {
-			String result;
-			Writer writer = new StringWriter();
-			reg.write(writer);
-			//writer.write(result);
-			result = writer.toString();
-			reg.read(new StringReader(result));
-		} catch (IOException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
-		
-		
 		
 	}
 }

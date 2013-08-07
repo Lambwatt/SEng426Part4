@@ -795,10 +795,6 @@ public class RegistryImplTest {
 		reg.setProperty("group", "double", (double)0);
 		reg.setProperty("group", "char", '0');
 		
-		reg.setFile(new File("test.txt"));
-		reg.setFile(new File("test.txt"));
-		assertTrue("reag has file set",reg.getFile()!=null);
-		
 		try {
 			String result;
 			Writer writer = new StringWriter();
@@ -811,6 +807,9 @@ public class RegistryImplTest {
 			e2.printStackTrace();
 		}
 		
+		reg.setFile(new File("test.txt"));
+		reg.setFile(new File("test.txt"));
+		assertTrue("reag has file set",reg.getFile()!=null);
 		
 		
 	}
