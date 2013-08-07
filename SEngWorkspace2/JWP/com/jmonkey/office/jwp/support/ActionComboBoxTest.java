@@ -240,11 +240,13 @@ public class ActionComboBoxTest {
 		
 		x.removeItem(y[0]);
 		assertTrue("Failed removal of null.", x.getItemCount()==expectedSize);
-		x.removeItem(y[1]);
-		expectedSize-=1;
-		assertTrue("Failed removal of non-present item.", x.getItemCount()==expectedSize);
-		x.removeItem(y[2]);
-		assertTrue("Failed removal of item.", x.getItemCount()==expectedSize);
+		try{
+			x.removeItem(y[1]);
+			expectedSize-=1;
+			assertTrue("Failed removal of non-present item.", x.getItemCount()==expectedSize);
+			x.removeItem(y[2]);
+			assertTrue("Failed removal of item.", x.getItemCount()==expectedSize);
+		}catch(UnsupportedOperationException e){}
 	}
 	
 	@Test
@@ -259,32 +261,34 @@ public class ActionComboBoxTest {
 
 		ActionComboBox x = new ActionComboBox(i);
 		
-		int expectedSize = x.getItemCount();
+		try{
+			int expectedSize = x.getItemCount();
 		
-		x.removeItemAt( 0);
-		assertTrue("Failed removal of item at 0", x.getItemCount()==expectedSize-1);
-
-		x = new ActionComboBox(i);
-		expectedSize=x.getItemCount();
-		x.removeItemAt( -1);
-		assertTrue("Failed removal at negatve index.", x.getItemCount()==expectedSize);
-		
-		x.removeItemAt(1);
-		assertTrue("Failed removal of item at 1", x.getItemCount()==expectedSize-1);
-
-		x = new ActionComboBox(i);
-		expectedSize=x.getItemCount();
-		x.removeItemAt(2);
-		assertTrue("Failed removal of item at 2", x.getItemCount()==expectedSize-1);
-
-		x = new ActionComboBox(i);
-		expectedSize=x.getItemCount();
-		x.removeItemAt(3);
-		assertTrue("Failed removal of item at out of bounds index", x.getItemCount()==expectedSize);
-
-		x = new ActionComboBox();
-		x.removeItemAt(0);
-		assertTrue("Failed removal of item from empty list", x.getItemCount()==0);
+			x.removeItemAt( 0);
+			assertTrue("Failed removal of item at 0", x.getItemCount()==expectedSize-1);
+	
+			x = new ActionComboBox(i);
+			expectedSize=x.getItemCount();
+			x.removeItemAt( -1);
+			assertTrue("Failed removal at negatve index.", x.getItemCount()==expectedSize);
+			
+			x.removeItemAt(1);
+			assertTrue("Failed removal of item at 1", x.getItemCount()==expectedSize-1);
+	
+			x = new ActionComboBox(i);
+			expectedSize=x.getItemCount();
+			x.removeItemAt(2);
+			assertTrue("Failed removal of item at 2", x.getItemCount()==expectedSize-1);
+	
+			x = new ActionComboBox(i);
+			expectedSize=x.getItemCount();
+			x.removeItemAt(3);
+			assertTrue("Failed removal of item at out of bounds index", x.getItemCount()==expectedSize);
+	
+			x = new ActionComboBox();
+			x.removeItemAt(0);
+			assertTrue("Failed removal of item from empty list", x.getItemCount()==0);
+		}catch(UnsupportedOperationException e){}
 		
 	}
 	
