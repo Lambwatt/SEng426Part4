@@ -4,7 +4,10 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 
+import javax.swing.JFileChooser;
+
 import jmonkey.export.RegistryFormatException;
+import jmonkey.office.jwp.support.Editor;
 import jmonkey.office.jwp.support.editors.TEXTEditor;
 
 import org.junit.Test;
@@ -91,7 +94,22 @@ public class DocumentManagerTest {
 			e.printStackTrace();
 		}
 	}
-	
+
+	@Test
+	public void test_configureFileType(){
+		DocumentManager dm;
+		try {
+			dm = new DocumentManager(new JWP(new String[]{""}));
+			dm.configureFileType(new JFileChooser(), "");
+			dm.configureFileType(new JFileChooser(), "text/rtf");
+			dm.configureFileType(new JFileChooser(), "text/html");
+			dm.configureFileType(new JFileChooser(), "text/plain");
+		} catch (Exception e) {
+			fail("Exception found: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+		  
 	/*
 	 * Functional Testing
 	 * 

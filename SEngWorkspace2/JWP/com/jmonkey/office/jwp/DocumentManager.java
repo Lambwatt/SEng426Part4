@@ -263,7 +263,7 @@ public final class DocumentManager extends DefaultDesktopManager implements
     }
   }
   
-  private void configureFileType(JFileChooser chooser, String ct) {
+  void configureFileType(JFileChooser chooser, String ct) {
     String defaultExt = "*.*";
     FileFilter filter;
     if (ct.equals("text/rtf")) {
