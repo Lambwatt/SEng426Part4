@@ -14,6 +14,14 @@ import jmonkey.office.jwp.support.Code;
 
 import jmonkey.office.jwp.support.images.Loader;
 
+/**
+ * Class that opens the help document for JWP
+ * 
+ * Curently inoperable due to unknown fucntionality of the IceClass
+ * 
+ * @author hoshi
+ *
+ */
 public class OfficeHelp extends JFrame {
   // static URL backURL = null;
   // static URL forURL = null;

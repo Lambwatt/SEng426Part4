@@ -16,6 +16,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 
+/**
+ * This class implements functionality of diplaying a property sheet,
+ * such as the one used in opening up main options, or popup options
+ * @author hoshi
+ *
+ */
 public final class PropertySheetDialog extends JDialog {
   private Properties m_properties = null;
   public Object[] m_keys = null;

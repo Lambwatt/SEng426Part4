@@ -18,6 +18,8 @@ import jmonkey.office.jwp.support.images.Loader;
 
 /**
  * DocumentFrame.class provides the internal frame for our application.
+ * 
+ * or in otherwords document frame = paticular documents.
  */
 public final class DocumentFrame extends JInternalFrame implements
     InternalFrameListener, FocusListener, VetoableChangeListener {

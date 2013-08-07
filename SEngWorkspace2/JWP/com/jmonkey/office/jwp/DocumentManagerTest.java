@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 
+import jmonkey.export.RegistryFormatException;
+import jmonkey.office.jwp.support.editors.TEXTEditor;
+
 import org.junit.Test;
 
 public class DocumentManagerTest {
@@ -26,6 +29,67 @@ public class DocumentManagerTest {
 		}
 		fail("Expected illegal argumenttest_DocumentManager_invalid");
 
+	}
+	
+	@Test
+	public void test_editorNew(){
+		DocumentManager dm;
+		try {
+			dm = new DocumentManager(new JWP(new String[]{""}));
+			dm.editorNew();
+		} catch (RegistryFormatException e) {
+			fail("Exception found: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void test_minimizeAll(){
+		DocumentManager dm;
+		try {
+			dm = new DocumentManager(new JWP(new String[]{""}));
+			dm.minimizeAll();
+		} catch (RegistryFormatException e) {
+			fail("Exception found: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+
+	@Test
+	public void test_tileAll(){
+		DocumentManager dm;
+		try {
+			dm = new DocumentManager(new JWP(new String[]{""}));
+			dm.tileAll();
+		} catch (RegistryFormatException e) {
+			fail("Exception found: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void test_closeAllDocuments(){
+		DocumentManager dm;
+		try {
+			dm = new DocumentManager(new JWP(new String[]{""}));
+			dm.closeAllDocuments();
+		} catch (Exception e) {
+			fail("Exception found: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void test_cascadeAll(){
+		DocumentManager dm;
+		try {
+			dm = new DocumentManager(new JWP(new String[]{""}));
+			dm.cascadeAll();
+		} catch (Exception e) {
+			fail("Exception found: " + e.getMessage());
+			e.printStackTrace();
+		}
 	}
 	
 	/*
