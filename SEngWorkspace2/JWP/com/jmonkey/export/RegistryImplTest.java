@@ -455,7 +455,7 @@ public class RegistryImplTest {
 		int[] version = {1};
 		RegistryImpl reg = new RegistryImpl(version);
 		try{
-			int returnVal = reg.markerToType(null);
+			int returnVal = reg.markerToType("");
 		}catch(RegistryException e){
 			assertEquals("unrecognized type string ()",e.getMessage());
 		}		
