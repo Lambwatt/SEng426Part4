@@ -749,10 +749,6 @@ final class RegistryImpl extends Registry implements Serializable {
     return m_groups.size() == 0;
   }
 
-  public int size() {
-    return m_groups.size();
-  }
-
   public void deleteGroup(String group) {
     m_groups.remove(group);
     m_altered = true;
@@ -779,23 +775,6 @@ final class RegistryImpl extends Registry implements Serializable {
     }
   }
 
-  public RegistryGroup exportGroup(String group) {
-    if (isGroup(group)) {
-      return (RegistryGroup) ((RegistryGroup) m_groups.get(group)).clone();
-    }
-    else {
-      return null;
-    }
-  }
-
-  public void importGroup(String group, RegistryGroup RegistryGroup) {
-    if (!isGroup(group)) {
-      RegistryGroup rg = (RegistryGroup) RegistryGroup.clone();
-      m_groups.put(group, rg);
-      m_altered = true;
-    }
-  }
-  
   public void initGroup(String group, String[][] props) {
     if (!isGroup(group)) {
       RegistryGroup rg = new RegistryGroup();
@@ -810,18 +789,6 @@ final class RegistryImpl extends Registry implements Serializable {
         rg.setProperty(propName, propValue, Registry.javaTypeToType(propType));
       }
       m_groups.put(group, rg);
-      m_altered = true;
-    }
-  }
-
-  public void replaceGroup(String group, RegistryGroup RegistryGroup) {
-    m_groups.put(group, RegistryGroup);
-    m_altered = true;
-  }
-
-  public void mergeRegistry(Registry registry) {
-    if (registry instanceof Map) {
-      m_groups.putAll((Map) registry);
       m_altered = true;
     }
   }
