@@ -82,10 +82,6 @@ public class JWP extends JFrame implements ActionListener {
 		return dt;
 	}
 
-	static ResourceBundle getResources() {
-		return rb;
-	}
-
 	public static String getMessage(String key) {
 		String msg = rb.getString(key);
 		return (msg == null) ? ("Missing message (key = " + key + ")") : msg;

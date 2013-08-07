@@ -774,6 +774,23 @@ final class RegistryImpl extends Registry implements Serializable {
       return null;
     }
   }
+  
+  public RegistryGroup exportGroup(String group) {
+	    if (isGroup(group)) {
+	      return (RegistryGroup) ((RegistryGroup) m_groups.get(group)).clone();
+	    }
+	    else {
+	      return null;
+	    }
+	  }
+
+  public void importGroup(String group, RegistryGroup RegistryGroup) {
+    if (!isGroup(group)) {
+      RegistryGroup rg = (RegistryGroup) RegistryGroup.clone();
+      m_groups.put(group, rg);
+      m_altered = true;
+    }
+  }
 
   public void initGroup(String group, String[][] props) {
     if (!isGroup(group)) {
@@ -792,6 +809,11 @@ final class RegistryImpl extends Registry implements Serializable {
       m_altered = true;
     }
   }
+  
+  public int size() {
+	    return m_groups.size();
+	  }
+
 
   /**
    * Commits the registry data to disk. Registry objects created from streams,
@@ -802,6 +824,18 @@ final class RegistryImpl extends Registry implements Serializable {
    */
   public void commit() throws IOException {
     storeData();
+  }
+  
+  public void replaceGroup(String group, RegistryGroup RegistryGroup) {
+	    m_groups.put(group, RegistryGroup);
+	    m_altered = true;
+	  }
+
+  public void mergeRegistry(Registry registry) {
+    if (registry instanceof Map) {
+      m_groups.putAll((Map) registry);
+      m_altered = true;
+    }
   }
 
   /**
