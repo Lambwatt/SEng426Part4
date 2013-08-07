@@ -28,7 +28,9 @@ import jmonkey.office.jwp.support.FileActionListener;
 import jmonkey.office.jwp.support.Mime;
 
 /**
- * This class manages the active document frames in the JWP application.
+ * This class manages the active document frames (documents) in the JWP application.
+ * 
+ * 
  */
 public final class DocumentManager extends DefaultDesktopManager implements
     DesktopManager, FileActionListener {

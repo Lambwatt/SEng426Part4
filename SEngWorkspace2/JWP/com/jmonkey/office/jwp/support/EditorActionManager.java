@@ -33,7 +33,17 @@ import javax.swing.text.StyledDocument;
 
 import jmonkey.office.jwp.support.images.Loader;
 
-
+/**
+ * This class manages actions that relate to changing the look an feel of the 
+ * text within a document.
+ * 
+ * This look and feel includes text size, font, colour, alignment, and bold, italic, etc.
+ * 
+ * Also here is where cut, paste, and copy actions are thrown.
+ * 
+ * @author hoshi
+ *
+ */
 public class EditorActionManager extends ActionManager {
   // Modifier Constants
   public static final int COLOUR_BLACK = Color.black.getRGB();

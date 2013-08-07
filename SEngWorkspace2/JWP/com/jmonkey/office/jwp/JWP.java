@@ -374,9 +374,8 @@ public class JWP extends JFrame implements ActionListener {
 		}
 
 		public void actionPerformed(ActionEvent e) {
-			OptionsDialog opts = new OptionsDialog(JWP.this, getMain(),
-					"Main Options", true);
-			opts.setVisible(true);
+			PropertySheetDialog.display(getMain(), getRegistry()
+					.referenceGroup("MAIN"));
 			getMain().repaint();
 		}
 	}
@@ -399,8 +398,12 @@ public class JWP extends JFrame implements ActionListener {
 		}
 
 		public void actionPerformed(ActionEvent e) {
-			PropertySheetDialog.display(getMain(), getRegistry()
-					.referenceGroup("MAIN"));
+			/*PropertySheetDialog.display(getMain(), getRegistry()
+					.referenceGroup("MAIN"));*/
+			OptionsDialog opts = new OptionsDialog(JWP.this, getMain(),
+					"Main Options", true);
+			opts.setVisible(true);
+			getMain().repaint();
 			getMain().repaint();
 		}
 	}
