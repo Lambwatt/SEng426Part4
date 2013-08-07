@@ -583,28 +583,6 @@ public class EditorActionManager extends ActionManager {
     }
   }
 
-  private static final class SearchAction extends AbstractAction {
-
-    public SearchAction(String nm, JFrame component) {
-      super(nm);
-    }
-
-    public void actionPerformed(ActionEvent e) {
-      Code.message("Search Activated...");
-    }
-  }
-
-  private static final class ReplaceAction extends AbstractAction {
-
-    public ReplaceAction(String nm, JFrame component) {
-      super(nm);
-    }
-
-    public void actionPerformed(ActionEvent e) {
-      Code.message("Replace Activated...");
-    }
-  }
-
   private static final class NewAction extends AbstractAction {
     private FileActionListener m_listener;
 
@@ -730,19 +708,7 @@ public class EditorActionManager extends ActionManager {
         editor.getEditorActionManager().m_attributeTracker);
   }
 
-  private Image create16x16ColourRec(Component c, Color colour) {
-    Code.debug("Component=" + c);
-    Code.debug("Color=" + colour);
-    Image img = c.createImage(16, 16);
-    Code.debug("Image=" + img);
-    Graphics g = img.getGraphics();
-    Code.debug("Graphics=" + g);
-    g.setColor(colour);
-    g.fillRect(0, 0, 16, 16);
-    Code.debug("Coloured Image=" + img);
-    return img;
-  }
-
+  
   /**
    * Create the default actions of the type: FONT_COLOUR_ACTION
    */
