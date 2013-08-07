@@ -394,14 +394,6 @@ public abstract class StyledEditor extends Editor
     m_editor.requestFocus();
   }
 
-  public final void setCaretBlinkRate(int rate) {
-    m_editor.getCaret().setBlinkRate(rate);
-  }
-
-  public final void setCaretColor(Color colour) {
-    m_editor.setCaretColor(colour);
-  }
-
   /**
    * Set the editor / document changed flag.
    * 
@@ -419,10 +411,6 @@ public abstract class StyledEditor extends Editor
 
   public void setCurrentRun(Element run) {
     m_currentRun = run;
-  }
-
-  public final void setSelectionColor(Color colour) {
-    m_editor.setSelectionColor(colour);
   }
 
   public void write(File file) throws IOException {
